@@ -15,7 +15,7 @@
     </script>
 
     <title>בן בליטי | אימון אישי למנהלים, דיוק ופריצת חסמים</title>
-    <meta name="description" content="תהליך אימון אישי ממוקד למנהלים ואנשים בצמתי דרכים. לייצר בהירות פנימית, לפרוץ תקרות זכוכית ולחבר בין הצלחה למשמעות.">
+    <meta name="description" content="תהליך אימון אישי ממוקד למנהלים ואנשים בצמתי דרכים. לייצר בהירות פנימית, לפרוץ תקרות זכוכית ולחבר בין הצלחה לסיפוק.">
     <link rel="canonical" href="https://www.benbelity.com/coaching">
     
     <!-- Open Graph Sharing -->
@@ -38,6 +38,9 @@
     
     <!-- אייקונים -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+
+    <!-- טעינת קובץ הטקסטים לחלונות הקופצים - מתקן את הכפתור התחתון -->
+    <script src="texts.js"></script>
 
     <style>
         body {
@@ -85,7 +88,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-light selection:bg-green-100 selection:text-primary-green relative">
 
-    <!-- ניווט עליון ממוקד (ללא לינקים ל-CFO כדי למנוע בריחת קהל) -->
+    <!-- ניווט עליון ממוקד -->
     <nav aria-label="ניווט ראשי" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -95,12 +98,12 @@
                     </div>
                     <span class="font-medium text-xl text-primary-green tracking-wide">בן בליטי | אימון אישי</span>
                 </div>
-                <div class="hidden sm:flex">
-                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20לקבוע%20שיחת%20ייעוץ." 
+                <div class="flex">
+                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20לקבוע%20שיחה%20לבדיקת%20התאמה%20לתהליך." 
                        target="_blank" 
-                       class="bg-primary-green text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#234a38] transition-colors flex items-center gap-2">
-                        תיאום שיחת בהירות
-                        <i data-lucide="calendar" class="h-4 w-4"></i>
+                       class="bg-primary-green text-white px-5 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#234a38] transition-colors flex items-center gap-2 shadow-sm">
+                        תיאום שיחה לבדיקת התאמה לתהליך
+                        <i data-lucide="calendar" class="h-4 w-4 hidden xs:inline"></i>
                     </a>
                 </div>
             </div>
@@ -109,7 +112,7 @@
 
     <main id="main-content">
         <!-- אזור Hero ממוקד אימון -->
-        <header class="relative pt-32 pb-24 lg:pt-42 lg:pb-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        <header class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in">
                 
                 <div class="mx-auto h-40 w-40 md:h-52 md:w-52 mb-8 rounded-full shadow-2xl overflow-hidden bg-white border-4 border-white profile-image-container">
@@ -117,8 +120,8 @@
                 </div>
 
                 <h1 class="mb-6 flex flex-col items-center">
-                    <span class="text-3xl tracking-tight font-extrabold text-primary-green sm:text-4xl md:text-5xl mb-4">הדיוק הפנימי הוא המפתח לפריצה חיצונית</span>
-                    <span class="max-w-2xl mx-auto text-lg text-gray-600 sm:text-xl font-normal leading-relaxed">מרחב שקט ומובנה למנהלים ולאנשים שרוצים לפרוץ תקרות זכוכית, לייצר בהירות בצמתי החלטה ולחבר בין הצלחה לסיפוק עמוק.</span>
+                    <span class="text-3xl tracking-tight font-extrabold text-primary-green sm:text-4xl md:text-5xl mb-4 leading-tight">מרחב שקט ומובנה למנהלים ולאנשים שרוצים לפרוץ תקרות זכוכית, לייצר בהירות בצמתי החלטה ולחבר בין הצלחה לסיפוק.</span>
+                    <span class="max-w-2xl mx-auto text-xl md:text-2xl text-accent-green font-medium tracking-wide mt-2">כי מגיע לך לאהוב את העשיה שלך</span>
                 </h1>
                 
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-4">
@@ -134,36 +137,96 @@
             <div aria-hidden="true" class="absolute top-0 left-0 -ml-20 -mt-20 w-72 h-72 rounded-full bg-green-50 opacity-60 blur-3xl"></div>
         </header>
 
-        <!-- מי אני בפסקה קצרה וממוקדת אימון -->
-        <section class="py-16 bg-white border-t border-gray-100">
-            <div class="max-w-3xl mx-auto px-4 text-center text-right">
-                <h2 class="text-2xl font-bold text-primary-green mb-6 text-center">השילוב בין עולם העסקים לעולם הנפש</h2>
-                <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                    נעים להכיר, אני <strong>בן בליטי</strong>. אחרי קרוב לשני עשורים בתפקידים פיננסיים ותפעוליים בכירים (כולל 6 שנים כסמנכ"ל הכספים של מעבדות רפא והובלת מהלכים מול קרן פימי), גיליתי שהאתגרים הגדולים ביותר של מנהלים ואנשים הישגיים הם לא טכניים – הם תמיד יושבים על חסמים אישיים, תחושת תקיעות, או הצורך בדיוק ובהירות בצמתי דרכים תובעניים.
-                </p>
-                <p class="text-gray-600 text-lg leading-relaxed">
-                    כמאמן אישי, אני מביא לקליניקה שילוב ייחודי: הבנה מוחלטת של הלחץ הארגוני והעסקי הכבד, יחד עם כלים אמוציונליים ופרקטיים מעולמות האימון, כדי לעזור לך לעצור, להתבונן פנימה, ולייצר את הצעד הבא שלך מתוך שקט נפשי ובטחון מלא.
-                </p>
+        <!-- אודות מנוסח מחדש ללא מסיחים -->
+        <section class="py-24 bg-white border-t border-gray-100">
+            <div class="max-w-3xl mx-auto px-4 text-right">
+                <h2 class="text-3xl font-bold text-primary-green mb-8 text-center">נעים להכיר - בן בליטי</h2>
+                <div class="text-gray-600 text-lg leading-relaxed space-y-6">
+                    <p>
+                        אחרי קרוב לשני עשורים בהובלת מערכים פיננסיים ותפעוליים מורכבים, מתוכם שש שנים כסמנכ"ל הכספים (CFO) של <strong>מעבדות רפא</strong>, גיליתי אמת פשוטה: האתגרים הכי גדולים של מנהלים ואנשים הישגיים הם כמעט אף פעם לא טכניים. הם כמעט תמיד נובעים מחסמים פנימיים, מתחושת תקיעות עמוקה בשגרה, או מהצורך החיוני בבהירות ובדיוק ברגעי צומת קריטיים.
+                    </p>
+                    <p>
+                        חוויתי על בשרי את כובד המשקל של ניהול תחת לחצי שטח קיצוניים, סביב השעון, ואת המורכבות שבשמירה על הובלה מנהיגותית יחד עם שקט פנימי. דווקא מתוך הרקע הזה, אני מביא לקליניקה מעטפת שהיא שילוב ייחודי: הבנה מוחלטת ונטולת פילטרים של העולם העסקי התובעני, יחד עם כלים אמוציונליים ופרקטיים מעולם האימון הממוקד. 
+                    </p>
+                    <p class="font-medium text-gray-800">
+                        אני כאן כדי לעזור לך לעצור את הטייס האוטומטי, להתבונן פנימה בצורה נקייה, ולייצר את הפריצה הבאה שלך – בקריירה ובחיים – מתוך חיבור אמיתי, שלווה ובטחון מלא.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- תוכן האימון (לקוח מהמבנה הקיים) -->
+        <!-- למי זה מתאים (עם 4 קוביות מותאמות תחבירית) -->
         <section class="py-24 bg-gray-50">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="bg-primary-green rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row mb-12">
+                <div class="text-center mb-16">
+                    <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">למי זה מתאים?</span>
+                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl mt-2">האם זה המרחב המדויק עבורך?</h2>
+                    <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-right mb-16">
+                    <!-- קוביה 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-primary-green">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i data-lucide="git-fork" class="ml-2 h-5 w-5 text-accent-green"></i>אנשים בצומת דרכים מקצועי
+                            </h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                כאלו העומדים בפני שינוי כיוון, מעבר תפקיד משמעותי, או החלטות עסקיות ואישיות כבדות משקל, ומחפשים לנקות רעשי רקע כדי לקבל החלטות מתוך דיוק פנימי מוחלט.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- קוביה 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-primary-green">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i data-lucide="shield-alert" class="ml-2 h-5 w-5 text-accent-green"></i>מי שחווה תקיעות ושחיקה
+                            </h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                מנהלים ואנשים שהגיעו לתקרת זכוכית בעשייה שלהם, או שמרגישים שההצלחה החיצונית וההישגים שהם צוברים כבר אינם מייצרים אצלם סיפוק, עניין או משמעות פנימית.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- קוביה 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-primary-green">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                                <i data-lucide="scale" class="ml-2 h-5 w-5 text-accent-green"></i>מנהלים שאיבדו את האיזון
+                            </h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                אנשים הישגיים שחיי הקריירה התובעניים והאינטנסיביים השתלטו עליהם לחלוטין, ומחפשים דרך פרקטית לשלב בין פריצה מקצועית לבין נוכחות אישית בחייהם ושקט נפשי.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- קוביה 4 (חדשה!) -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-accent-green bg-gradient-to-br from-white to-green-50/30">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary-green mb-3 flex items-center">
+                                <i data-lucide="help-circle" class="ml-2 h-5 w-5 text-primary-green"></i>מי שמרגיש חוסר חיבור לעשייה שלו
+                            </h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                למי שחווה חוסר סנכרון מטריד בין השגרה הלחוצה ביומיום לבין הרצון והכיוון הפנימי האמיתי שלו, ומכיר מקרוב את התחושה המהדהדת בסוף היום: <span class="font-medium text-primary-green italic">"של מי החיים האלה בעצם?"</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- הפרופיל המקצועי בקבוצה העיקרית -->
+                <div class="bg-primary-green rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row mb-12 text-white">
                     <div class="md:w-5/12 relative h-56 md:h-auto">
                         <img src="coaching-main.png" alt="אימון אישי" class="w-full h-full object-cover">
                     </div>
-
-                    <div class="md:w-7/12 p-8 md:p-10 flex flex-col justify-center text-white">
-                        <h3 class="text-2xl font-bold mb-4">מה קורה בתהליך האימון האישי?</h3>
-                        <p class="text-green-50 mb-6 leading-relaxed text-base">
-                            זהו תהליך עומק מובנה המיועד לדיוק, בהירות והגשמה. אנו מייצרים מרחב סטרילי ובטוח המאפשר לך לבחון את דפוסי החשיבה שלך, לפרק פחדים או תקיעויות, ולבנות תוכנית עבודה מעשית שמובילה לתוצאות ממשיות – בלי לוותר על השקט הפנימי.
+                    <div class="md:w-7/12 p-8 md:p-10 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4">המחויבות שלי לתהליך שלך</h3>
+                        <p class="text-green-50 mb-8 leading-relaxed text-base">
+                            בתהליך האימון אנו לא נשארים רק ברמת הדיבורים. אנחנו מציפים את חסמי העומק, מבינים מה מניע אותך באמת, ומפרקים את זה לתוכנית פעולה בהירה וישימה ביומיום, תוך ליווי אישי שלי לאורך כל הדרך.
                         </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 items-center mt-4">
-                            <a href="https://www.hameamnistim.co.il/%D7%90%D7%99%D7%9E%D7%95%D7%9F/%D7%91%D7%9F-%D7%91%D7%9C%D7%99%D7%98%D7%99-%D7%9E%D7%90%D7%9E%D7%9F-%D7%90%D7%99%D7%A<th>%D7%9C%D7%93%D7%99%D7%95%D7%A7-%D7%91%D7%94%D7%99%D7%A8%D7%95%D7%AA-%D7%95%D7%94%D7%92%D7%A9%D7%9E%D7%94?c=%D7%90%D7%99%D7%9E%D7%95%D7%9F-%D7%91%D7%96%D7%95%D7%9D-%D7%90%D7%95%D7%A0%D7%9C%D7%99%D7%99%D7%9F" 
+                        <div class="flex flex-col sm:flex-row gap-4 items-center">
+                            <a href="https://www.hameamnistim.co.il/%D7%90%D7%99%D7%9E%D7%95%D7%9F/%D7%91%D7%9F-%D7%91%D7%9C%D7%99%D7%98%D7%99-%D7%9E%D7%90%D7%9E%D7%9F-%D7%90%D7%99%D7%A9%D7%99-%D7%9C%D7%93%D7%99%D7%95%D7%A7-%D7%91%D7%94%D7%99%D7%A8%D7%95%D7%AA-%D7%95%D7%94%D7%92%D7%A9%D7%9E%D7%94?c=%D7%90%D7%99%D7%9E%D7%95%D7%9F-%D7%91%D7%96%D7%95%D7%9D-%D7%90%D7%95%D7%A0%D7%9C%D7%99%D7%99%D7%9F" 
                                target="_blank" 
                                class="inline-flex justify-center items-center bg-[#79247A] text-white font-bold py-3 px-6 text-sm rounded-full hover:bg-[#5D1C5E] transition-all shadow-lg w-full sm:w-auto">
                                 הפרופיל שלי בפורטל המאמניסטים
@@ -173,34 +236,10 @@
                     </div>
                 </div>
 
-                <!-- מתי לפנות - אימון -->
-                <div class="relative pt-16 pb-16 mt-8 rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
-                    <div class="absolute inset-0 z-0 pointer-events-none">
-                        <img src="crossroads.png" alt="" class="w-full h-full object-cover opacity-70">
-                        <div class="absolute inset-0 bg-white/50 backdrop-blur-[2px]"></div>
-                    </div>
-
-                    <div class="relative z-10 px-4 sm:px-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-10 text-center">מתי זה הזמן הנכון להגיע לאימון?</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-right">
-                            <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-2">צומת דרכים בקריירה</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">לפני מעבר תפקיד, שינוי כיוון מקצועי או החלטות עסקיות כבדות משקל שדורשות ניקוי רעשים פנימי.</p>
-                            </div>
-                            <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-2">תחושת תקיעות ושחיקה</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">כשאתה מרגיש שהגעת לתקרת זכוכית, או כשההצלחה החיצונית כבר לא מייצרת אצלך סיפוק ומשמעות פנימית.</p>
-                            </div>
-                            <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-2">חוסר איזון בחיים</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">כשחיי הקריירה התובעניים משתלטים לחלוטין, ואתה מחפש את הדרך לשלב הצלחה יחד עם שקט נפשי ונוכחות אישית.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-12 text-center">
-                    <button onclick="openModal('coaching')" class="bg-primary-green text-white px-8 py-3 rounded-full font-medium shadow-md hover:bg-[#234a38] transition-all">
+                <!-- הכפתור המתוקן - כעת פותח את המודל בהצלחה -->
+                <div class="mt-16 text-center">
+                    <button onclick="openModal('coaching')" class="bg-primary-green text-white px-8 py-4 rounded-full font-medium shadow-md hover:bg-[#234a38] transition-all text-lg border border-transparent flex items-center gap-2 mx-auto">
+                        <i data-lucide="book-open" class="h-5 w-5"></i>
                         לחץ כאן לקריאת ההסבר המלא על התהליך
                     </button>
                 </div>
@@ -213,7 +252,7 @@
     <footer id="contact" class="bg-gray-900 text-white py-16 text-center border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl font-bold mb-4">בואו נתחיל בשיחת הכרות קצרה</h2>
-            <p class="text-gray-400 mb-8 max-w-xl mx-auto">בלי שום התחייבות – נבין יחד איפה אתה נמצא עכשיו ואיך נוכל לייצר עבורך את הבהירות והדיוק קדימה.</p>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto text-base">בלי שום התחייבות – נבין יחד איפה אתה נמצא עכשיו ואיך נוכל לייצר עבורך את הבהירות והדיוק קדימה.</p>
 
             <div class="flex justify-center gap-8 mb-12">
                 <a href="mailto:ben.belity@gmail.com" class="group flex flex-col items-center gap-2">
