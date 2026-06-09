@@ -14,14 +14,14 @@
       gtag('config', 'AW-18209679993');
     </script>
 
-    <title>בן בליטי | אימון אישי, דיוק ופריצת חסמים</title>
-    <meta name="description" content="תהליך אימון אישי ממוקד למנהלים ואנשים בצמתי דרכים. לייצר בהירות פנימית, לפרוץ תקרות זכוכית ולחבר בין הצלחה לסיפוק.">
+    <title>בן בליטי | אימון אישי לבהירות וכיוון</title>
+    <meta name="description" content="תהליך אימון אישי ממוקד למנהלים ואנשים בצמתי דרכים. לייצר בהירות פנימית, להבין מה חשוב עכשיו ולתרגם את זה לצעדים מעשיים.">
     <link rel="canonical" href="https://www.benbelity.com/coaching">
     
     <!-- Open Graph Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.benbelity.com/coaching">
-    <meta property="og:title" content="בן בליטי | אימון אישי לצמיחה והגשמה">
+    <meta property="og:title" content="בן בליטי | אימון אישי לאנשים שלא איבדו את הדרך">
     <meta property="og:description" content="מרחב שקט לדיוק, בהירות ופריצת חסמים אישיים בדרך להצלחה הבאה שלך.">
     <meta property="og:image" content="front3.png">
 
@@ -76,14 +76,6 @@
             z-index: -1;
         }
 
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        .whatsapp-float-btn {
-            animation: pulse-green 2s infinite;
-        }
 /* עיצוב חלון קופץ - Modal */
 .modal-overlay {
     display: none;
@@ -143,12 +135,51 @@
         border-radius: 1.25rem;
     }
 }
+
+/* טקסט חצי עיגול מסביב לכפתור העץ */
+.curved-text-container {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    top: -16px;
+    left: -16px;
+    pointer-events: none;
+    animation: rotate 10s linear infinite;
+}
+
+.curved-text-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.curved-text-container text {
+    font-size: 11px;
+    font-weight: bold;
+    fill: #2E5C46; /* text-primary-green */
+    letter-spacing: 1px;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* אנימציית פולס ייחודית בצבע ירוק-יער לעץ */
+@keyframes pulse-tree {
+    0% { box-shadow: 0 0 0 0 rgba(46, 92, 70, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(46, 92, 70, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(46, 92, 70, 0); }
+}
+.tree-float-btn {
+    animation: pulse-tree 2s infinite;
+}
+
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-light selection:bg-green-100 selection:text-primary-green relative">
 
     <!-- קישור נגישות נסתר לטובת ניווט מקלדת מהיר -->
-    <a href="#main-content" class="sr-only focus:not-sr-only bg-primary-green text-white px-4 py-2 absolute top-2 right-2 z-[100] rounded-md font-medium shadow-lg">דלג לתוכן המרכזי</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only bg-primary-green text-white px-4 py-2 absolute top-2 right-2 z- rounded-md font-medium shadow-lg">דלג לתוכן המרכזי</a>
 
     <!-- ניווט עליון ממוקד -->
     <nav aria-label="ניווט ראשי" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-gray-100 transition-all duration-300">
@@ -156,16 +187,29 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
                     <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center overflow-hidden border border-gray-100 shadow-sm">
-                        <img src="logo.png" alt="בן בליטי לוגו" class="object-contain w-full h-full p-1">
+                        <img src="logo.png" alt="בן בליטי לוגו" class="object-cover w-full h-full">
                     </div>
-                    <span class="font-medium text-xl text-primary-green tracking-wide">בן בליטי | אימון אישי</span>
+                    <!-- נוסף לבהירות וכיוון -->
+                    <span class="font-medium text-lg md:text-xl text-primary-green tracking-wide">בן בליטי | אימון אישי לבהירות וכיוון</span>
                 </div>
-                <div class="flex">
-                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20לקבוע%20שיחה%20לבדיקת%20התאמה%20לתהליך." 
+                <div class="flex flex-col items-center justify-center hidden sm:flex">
+                    <!-- קישור מותאם לגוגל פורמס -->
+                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
                        target="_blank" 
-                       class="bg-primary-green text-white px-5 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#234a38] transition-colors flex items-center gap-2 shadow-sm">
-                        תיאום שיחה לבדיקת התאמה לתהליך
-                        <i data-lucide="calendar" class="h-4 w-4 hidden xs:inline"></i>
+                       class="bg-primary-green text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-[#234a38] transition-colors flex items-center gap-2 shadow-sm">
+                        לשאלון בדיקת התאמה לתהליך
+                        <i data-lucide="clipboard-list" class="h-4 w-4 hidden md:inline"></i>
+                    </a>
+                    <!-- טקסט נוסף מתחת לכפתור בתפריט העליון -->
+                    <span class="text-[10px] text-gray-500 mt-1">שיחת היכרות קצרה, ללא התחייבות</span>
+                </div>
+                
+                <!-- גיבוי למובייל -->
+                <div class="flex sm:hidden">
+                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
+                       target="_blank" 
+                       class="bg-primary-green text-white p-2 rounded-full font-medium hover:bg-[#234a38] transition-colors shadow-sm">
+                        <i data-lucide="clipboard-list" class="h-5 w-5"></i>
                     </a>
                 </div>
             </div>
@@ -173,7 +217,7 @@
     </nav>
 
     <main id="main-content">
-        <!-- אזור Hero מתוקן, מיושר ואלגנטי ללא תגיות ה-AI -->
+        <!-- אזור Hero מיושר, אלגנטי ועם התוכן החדש -->
         <header class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in">
                 
@@ -182,189 +226,346 @@
                 </div>
 
                 <h1 class="mb-6 flex flex-col items-center text-center">
-                    <span class="text-xl sm:text-2xl md:text-3xl tracking-tight font-bold text-primary-green mb-4 leading-relaxed max-w-3xl flex flex-col items-center gap-1.5">
-                        <span>מרחב שקט ומובנה למי שרוצים לפרוץ תקרות זכוכית</span>
-                        <span>לייצר בהירות בצמתי החלטה</span>
-                        <span>ולחבר בין הצלחה לסיפוק.</span>
+                    <span class="text-2xl sm:text-3xl md:text-4xl tracking-tight font-bold text-primary-green mb-4 leading-relaxed max-w-4xl">
+                        אימון אישי לאנשים שלא איבדו את הדרך <br class="hidden sm:block"> 
+                        אבל מרגישים שהגיע הזמן לבחור אותה מחדש
                     </span>
-                    <span class="max-w-2xl mx-auto text-base md:text-lg text-accent-green font-medium tracking-wide mt-2">כי מגיע לך לאהוב את העשיה שלך</span>
+                    <span class="max-w-3xl mx-auto text-base md:text-lg text-gray-600 font-medium tracking-wide mt-2 leading-relaxed">
+                        תהליך אישי קצר ומובנה של כ־12 מפגשים, למי שחווה חוסר שקט, תקיעות או צומת מקצועי/אישי — ורוצה לעשות סדר, להבין מה חשוב עכשיו, ולתרגם את זה לצעדים מעשיים.
+                    </span>
                 </h1>
                 
-                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-4">
-                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20לקבל%20פרטים." 
+                <!-- כפתור העץ הירוק לטופס וטקסט מתחתיו -->
+                <div class="mt-10 flex flex-col items-center px-4">
+                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
                        target="_blank" 
-                       class="bg-[#25D366] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-[#20b858] transition-all w-full sm:w-auto text-lg flex items-center justify-center gap-2">
-                        <img src="whatsapp.png" alt="" class="h-6 w-6 bg-white rounded-full p-0.5">
-                        בוא נדבר בווטסאפ
+                       class="bg-primary-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all w-full sm:w-auto text-lg flex items-center justify-center gap-3">
+                        <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm">
+                        לבדיקת התאמה לתהליך
                     </a>
+                    <!-- הטקסט הועבר לכאן, מתחת לכפתור -->
+                    <span class="text-sm font-medium text-gray-500 mt-3">שיחת היכרות קצרה, ללא התחייבות</span>
                 </div>
             </div>
             
             <div aria-hidden="true" class="absolute top-0 left-0 -ml-20 -mt-20 w-72 h-72 rounded-full bg-green-50 opacity-60 blur-3xl"></div>
         </header>
 
-        <!-- אודות -->
-        <section class="py-24 bg-white border-t border-gray-100">
-            <div class="max-w-3xl mx-auto px-4 text-right">
-                <h2 class="text-3xl font-bold text-primary-green mb-8 text-center">נעים להכיר -  בן בליטי</h2>
-                <div class="text-gray-600 text-lg leading-relaxed space-y-6">
-                    <p>
-                        אחרי קרוב לשני עשורים בהובלת מערכים פיננסיים ותפעוליים מורכבים, מתוכם שש שנים כסמנכ"ל הכספים (CFO) של <strong>מעבדות רפא</strong>, גיליתי אמת פשוטה: האתגרים הכי גדולים של מנהלים ואנשים הישגיים הם כמעט אף פעם לא טכניים. הם כמעט תמיד נובעים מחסמים פנימיים, מתחושת תקיעות עמוקה בשגרה, או מהצורך החיוני בבהירות ובדיוק ברגעי צומת קריטיים.
-                    </p>
-                    <p>
-                        חוויתי באופן אישי את כובד המשקל של ניהול תחת לחצי שטח גבוהים, סביב השעון, ואת המורכבות שבשמירה על הובלה מנהיגותית לצד שקט פנימי. דווקא מתוך הרקע הזה, אני מביא לקליניקה מעטפת שהיא שילוב ייחודי: הבנה מוחלטת ונטולת פילטרים של העולם העסקי התובעני, יחד עם כלים אמוציונליים ופרקטיים מעולם האימון הממוקד. 
-                    </p>
-                    <p class="font-medium text-gray-800">
-                        אני כאן כדי לעזור לך לעצור את הטייס האוטומטי, להתבונן פנימה בצורה נקייה, ולייצר את הפריצה הבאה שלך – בקריירה ובחיים – מתוך חיבור אמיתי, שלווה ובטחון מלא.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- למי זה מתאים (עם כותרת אחידה ומדויקת ו-4 קוביות) -->
-        <section class="py-24 bg-gray-50">
+        <!-- האם זה מתאים לי? (קוביות) -->
+        <section class="py-24 bg-gray-50 border-t border-gray-100">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl mt-2">האם זה מתאים לי?</h2>
-                    <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60"></div>
+                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl">האם זה מתאים לי?</h2>
+                    <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60 mb-6"></div>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                        התהליך מיועד לאנשים מתפקדים, חושבים ואחראיים — שלא מחפשים לפרק את החיים, אלא להבין מה כבר לא מדויק ואיך נכון להמשיך מכאן.
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-right mb-16">
-                    <!-- קוביה 1 -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-primary-green">
+                    <!-- קוביה 1 (ימין למעלה) -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                         <div>
-                            <h4 class="text-xl font-bold text-primary-green mb-3 flex items-center">
-                                <i data-lucide="git-fork" class="ml-2 h-5 w-5 text-accent-green"></i>אנשים בצומת דרכים מקצועי
-                            </h4>
+                            <h4 class="text-xl font-bold text-primary-green mb-3">אנשים בצומת מקצועי או אישי</h4>
                             <p class="text-gray-600 leading-relaxed">
-                                כאלו העומדים בפני שינוי כיוון, מעבר תפקיד משמעותי, או החלטות עסקיות ואישיות כבדות משקל, ומחפשים לנקות רעשי רקע כדי לקבל החלטות מתוך דיוק פנימי מוחלט.
+                                מי שעומדים בפני שינוי כיוון, מעבר תפקיד, החלטה משמעותית או תחושה שהכיוון הנוכחי כבר לא מדויק — ורוצים לקבל החלטות מתוך בהירות ולא מתוך לחץ.
                             </p>
                         </div>
                     </div>
 
-                    <!-- קוביה 2 -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-primary-green">
+                    <!-- קוביה 2 (שמאל למעלה) -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                         <div>
-                            <h4 class="text-xl font-bold text-primary-green mb-3 flex items-center">
-                                <i data-lucide="shield-alert" class="ml-2 h-5 w-5 text-accent-green"></i>מי שחווה תקיעות ושחיקה
-                            </h4>
+                            <h4 class="text-xl font-bold text-primary-green mb-3">מי שמרגיש תקיעות, שחיקה או ירידה בחיות</h4>
                             <p class="text-gray-600 leading-relaxed">
-                                מנהלים ואנשים שהגיעו לתקרת זכוכית בעשייה שלהם, או שמרגישים שההצלחה החיצונית וההישגים שהם צוברים כבר אינם מייצרים אצלם סיפוק, עניין או משמעות פנימית.
+                                אנשים שממשיכים לתפקד, לעבוד ולעמוד בציפיות — אבל מרגישים שהעשייה כבר לא מייצרת מספיק עניין, סיפוק או אנרגיה פנימית.
                             </p>
                         </div>
                     </div>
 
-                    <!-- קוביה 3 -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-primary-green">
+                    <!-- קוביה 3 (ימין למטה) -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                         <div>
-                            <h4 class="text-xl font-bold text-primary-green mb-3 flex items-center">
-                                <i data-lucide="scale" class="ml-2 h-5 w-5 text-accent-green"></i>מנהלים שאיבדו את האיזון
-                            </h4>
+                            <h4 class="text-xl font-bold text-primary-green mb-3">מי שמרגיש שהחיים הפכו לריצה מתמשכת</h4>
                             <p class="text-gray-600 leading-relaxed">
-                                אנשים הישגיים שחיי הקריירה התובעניים והאינטנסיביים השתלטו עליהם לחלוטין, ומחפשים דרך פרקטית לשלב בין פריצה מקצועית לבין נוכחות אישית בחייהם ושקט נפשי.
+                                למי שמרגיש שהשגרה, האחריות והעומס השתלטו על היומיום — ורוצה לעצור רגע, להחזיר בחירה, ולבנות מחדש איזון שמתאים למציאות שלו.
                             </p>
                         </div>
                     </div>
 
-                    <!-- קוביה 4 -->
-                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-t-4 border-accent-green bg-gradient-to-br from-white to-green-50/30">
+                    <!-- קוביה 4 (שמאל למטה) -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                         <div>
-                            <h4 class="text-xl font-bold text-primary-green mb-3 flex items-center">
-                                <i data-lucide="help-circle" class="ml-2 h-5 w-5 text-primary-green"></i>מי שמרגיש חוסר חיבור לעשייה שלו
-                            </h4>
+                            <h4 class="text-xl font-bold text-primary-green mb-3">מי שמרגיש חוסר חיבור לעשייה שלו</h4>
                             <p class="text-gray-600 leading-relaxed">
-                                למי שחווה חוסר סנכרון מטריד בין השגרה הלחוצה ביומיום לבין הרצון והכיוון הפנימי האמיתי שלו, ומכיר מקרוב את התחושה המהדהדת בסוף היום: <span class="font-medium text-primary-green italic">"של מי החיים האלה בעצם?"</span>
+                                למי שחווה חוסר סנכרון מטריד בין השגרה הלחוצה ביומיום לבין הרצון והכיוון הפנימי האמיתי שלו, ומכיר מקרוב את התחושה המהדהדת בסוף היום: "של מי החיים האלה בעצם?"
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- המחויבות שלי והסושיאל מדיה המורחבים -->
-                <div class="bg-primary-green rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row mb-12 text-white">
-                    <div class="md:w-5/12 relative h-56 md:h-auto">
-                        <img src="coaching-main.png" alt="אימון אישי" class="w-full h-full object-cover">
-                    </div>
-                    <div class="md:w-7/12 p-8 md:p-10 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-4">המחויבות שלי לתהליך שלך</h3>
-                        <p class="text-green-50 mb-8 leading-relaxed text-base">
-                            בתהליך האימון אנו לא נשארים רק ברמת הדיבורים. אנחנו מציפים את חסמי העומק, מבינים מה מניע אותך באמת, ומפרקים את זה לתוכנית פעולה בהירה וישימה ביומיום, תוך ליווי אישי שלי לאורך כל הדרך.
-                        </p>
-                        <!-- כפתורי מדיה וסושיאל מסודרים בשורה -->
-                        <div class="flex flex-wrap gap-4 items-center justify-start mt-4">
-                            <!-- קישור מאמניסטים מעודכן וקצר -->
-                            <a href="https://www.hameamnistim.co.il/%D7%90%D7%99%D7%9E%D7%95%D7%9F/%D7%91%D7%9F-%D7%91%D7%9C%D7%99%D7%98%D7%99" 
-                               target="_blank" 
-                               class="inline-flex justify-center items-center bg-[#79247A] text-white font-bold py-2.5 px-5 text-xs rounded-full hover:bg-[#5D1C5E] transition-all shadow-md">
-                                פרופיל המאמניסטים
-                                <img src="target.png" alt="" class="h-4 w-4 mr-2 object-contain">
-                            </a>
-                            
-                            <a href="https://www.facebook.com/profile.php?id=61589761047815" 
-                               target="_blank" 
-                               class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-md hover:scale-110 transition-all" 
-                               aria-label="עמוד הפייסבוק של בן בליטי">
-                                <img src="facebook.png" alt="" class="w-5 h-5 object-contain">
-                            </a>
-                            
-                            <a href="https://www.instagram.com/belitybencoach" 
-                               target="_blank" 
-                               class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-md hover:scale-110 transition-all" 
-                               aria-label="עמוד האינסטגרם של בן בליטי">
-                                <img src="instagram.png" alt="" class="w-5 h-5 object-contain">
-                            </a>
-                        </div>
-                    </div>
+                <!-- אזור ובכל מקרה ש: -->
+                <div class="max-w-3xl mx-auto text-right bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 relative mb-16">
+                    <h3 class="text-2xl font-bold text-primary-green mb-8 text-center">ובכל מקרה ש:</h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start">
+                            <span class="h-3.5 w-3.5 bg-primary-green rounded-full ml-4 mt-2 shrink-0 shadow-sm"></span>
+                            <span class="text-gray-700 text-lg leading-relaxed">מבחוץ הכול נראה די בסדר, אבל בפנים יש חוסר שקט.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-3.5 w-3.5 bg-primary-green rounded-full ml-4 mt-2 shrink-0 shadow-sm"></span>
+                            <span class="text-gray-700 text-lg leading-relaxed">אתה מתפקד, עובד, עושה — אבל מרגיש שהעשייה כבר לא מספיק מחוברת אליך.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-3.5 w-3.5 bg-primary-green rounded-full ml-4 mt-2 shrink-0 shadow-sm"></span>
+                            <span class="text-gray-700 text-lg leading-relaxed">אתה נמצא בצומת מקצועי או אישי.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-3.5 w-3.5 bg-primary-green rounded-full ml-4 mt-2 shrink-0 shadow-sm"></span>
+                            <span class="text-gray-700 text-lg leading-relaxed">אתה לא רוצה לפרק את החיים, אלא להבין מה צריך לדייק.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-3.5 w-3.5 bg-primary-green rounded-full ml-4 mt-2 shrink-0 shadow-sm"></span>
+                            <span class="text-gray-700 text-lg leading-relaxed">אתה מחפש תהליך מעשי, לא רק השראה.</span>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- מבנה תהליך האימון - מובנה ישירות ב-HTML כדי למנוע תיבה ריקה, ללא צורך בשום לחיצה -->
-                <div class="mt-16 max-w-3xl mx-auto">
-                    <h3 class="text-2xl font-bold text-primary-green text-center mb-6">איך נראה תהליך האימון?</h3>
-                    <div id="coaching-process-text" class="text-right text-gray-600 text-lg leading-relaxed bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm space-y-4 border-r-4 border-primary-green">
-                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                            מדובר בתהליך אימון אישי קצר וממוקד (כ- 12 פגישות), שמיועד לאנשים מתפקדים שרוצים יותר בהירות, משמעות וכיוון — אבל בלי להתנתק מהמציאות.
-                        </p>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            בתהליך אנחנו עושים סדר במה שקורה עכשיו, מזהים מה כבר פחות מדויק, מחדדים מה באמת חשוב לך בשלב הזה, ומתרגמים את זה לצעדים מעשיים שאפשר להתחיל ליישם.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- איפה מתקיימים המפגשים -->
-                <div class="mt-8 max-w-3xl mx-auto bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm text-center">
-                    <h4 class="text-xl font-bold text-primary-green mb-4 flex items-center justify-center gap-2">
-                        <i data-lucide="map-pin" class="h-5 w-5 text-accent-green"></i>
-                        איפה מתקיימים המפגשים?
-                    </h4>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        המפגשים מתקיימים באופן פרונטלי בקליניקה במודיעין, בבאר שבע, או מכל מקום דרך הזום, לפי העדפת המתאמן/ת.
-                    </p>
-                </div>
-
-                <!-- המלצות המתאמנים (שודרג לפתיחה בחלון קופץ אלגנטי וממורכז) -->
-                <div class="mt-8 max-w-3xl mx-auto bg-white p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm text-center">
-                    <h4 class="text-xl font-bold text-primary-green mb-4 flex items-center justify-center gap-2">
-                        <i data-lucide="heart" class="h-5 w-5 text-accent-green"></i>
-                        המלצות ממתאמנים
-                    </h4>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        מילים חמות של אנשים שעברו איתי תהליכי דיוק, בהירות וצמיחה אישית.
-                    </p>
-                    <button onclick="openModal('testimonials')" class="inline-flex justify-center items-center bg-primary-green hover:bg-[#234a38] text-white font-bold py-3 px-8 rounded-full transition-all shadow-md gap-2 text-base">
-                        <i data-lucide="message-square" class="h-5 w-5"></i>
-                        לקריאת ההמלצות המלאות
-                    </button>
+                
+                <!-- כפתור העץ הירוק לטופס, נוסף שוב כאן -->
+                <div class="mt-8 flex justify-center px-4">
+                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
+                       target="_blank" 
+                       class="bg-primary-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all w-full sm:w-auto text-lg flex items-center justify-center gap-3">
+                        <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm">
+                        לשאלון בדיקת התאמה לתהליך
+                    </a>
                 </div>
 
             </div>
         </section>
 
-        <!-- חלק הנעה לפעולה חזרה לאתר הראשי / שירותי CFO -->
-        <section class="py-20 bg-white text-center border-t border-b border-gray-100 shadow-inner">
+        <!-- מה עושים בתהליך? -->
+        <section class="py-16 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-right">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl">מה עושים בתהליך?</h2>
+                    <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60"></div>
+                </div>
+                
+                <p class="text-xl text-gray-700 font-medium mb-8 text-center">בתהליך אנחנו עובדים על שלושה דברים:</p>
+                
+                <ul class="space-y-6 max-w-3xl mx-auto">
+                    <li class="flex flex-col sm:flex-row items-start gap-4 bg-gray-50 p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <span class="h-4 w-4 bg-primary-green rounded-full mt-1.5 shrink-0 shadow-sm hidden sm:block"></span>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-1 flex items-center gap-2">
+                                <span class="h-3 w-3 bg-primary-green rounded-full shrink-0 shadow-sm sm:hidden"></span>
+                                עושים סדר במה שקורה עכשיו
+                            </h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">איפה אתה נמצא, מה מעסיק אותך, מה כבר לא מדויק.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex flex-col sm:flex-row items-start gap-4 bg-gray-50 p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <span class="h-4 w-4 bg-primary-green rounded-full mt-1.5 shrink-0 shadow-sm hidden sm:block"></span>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-1 flex items-center gap-2">
+                                <span class="h-3 w-3 bg-primary-green rounded-full shrink-0 shadow-sm sm:hidden"></span>
+                                מחדדים מה באמת חשוב לך בשלב הזה
+                            </h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">לא לפי מה "צריך", אלא לפי מה שנכון לך עכשיו.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="flex flex-col sm:flex-row items-start gap-4 bg-gray-50 p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <span class="h-4 w-4 bg-primary-green rounded-full mt-1.5 shrink-0 shadow-sm hidden sm:block"></span>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-1 flex items-center gap-2">
+                                <span class="h-3 w-3 bg-primary-green rounded-full shrink-0 shadow-sm sm:hidden"></span>
+                                מתרגמים את זה לצעדים מעשיים
+                            </h4>
+                            <p class="text-gray-600 text-lg leading-relaxed">החלטות, פעולות, שיחות, בדיקות, שינויי כיוון קטנים או גדולים.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- אודות והמחויבות (שתי עמודות אלגנטיות) -->
+        <section class="py-24 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                    
+                    <!-- טקסט: נעים להכיר -->
+                    <div class="text-right flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold text-primary-green mb-8">נעים להכיר - בן בליטי</h2>
+                        <div class="text-gray-600 text-lg leading-relaxed space-y-6">
+                            <p>
+                                אחרי קרוב לשני עשורים בהובלת מערכים פיננסיים ותפעוליים מורכבים, מתוכם שש שנים כסמנכ"ל הכספים (CFO) של <strong>מעבדות רפא</strong>, גיליתי אמת פשוטה: האתגרים הכי גדולים של מנהלים ואנשים הישגיים הם כמעט אף פעם לא טכניים. הם כמעט תמיד נובעים מחסמים פנימיים, מתחושת תקיעות עמוקה בשגרה, או מהצורך החיוני בבהירות ובדיוק ברגעי צומת קריטיים.
+                            </p>
+                            <p>
+                                חוויתי באופן אישי את כובד המשקל של ניהול תחת לחצי שטח גבוהים, סביב השעון, ואת המורכבות שבשמירה על הובלה מנהיגותית לצד שקט פנימי. דווקא מתוך הרקע הזה, אני מביא לקליניקה מעטפת שהיא שילוב ייחודי: הבנה מוחלטת ונטולת פילטרים של העולם העסקי התובעני, יחד עם כלים אמוציונליים ופרקטיים מעולם האימון הממוקד. 
+                            </p>
+                            <p class="font-medium text-gray-800">
+                                אני כאן כדי לעזור לך לעצור את הטייס האוטומטי, להתבונן פנימה בצורה נקייה, ולייצר את הפריצה הבאה שלך – בקריירה ובחיים – מתוך חיבור אמיתי, שלווה ובטחון מלא.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- תמונה וטקסט: המחויבות שלי - מעוצב ומותאם למניעת חיתוך תמונה -->
+                    <div class="bg-primary-green rounded-3xl overflow-hidden shadow-xl text-white flex flex-col h-full border border-gray-100">
+                        <!-- התאמה אישית כדי לתת יותר מקום לתמונה ולא לחתוך את הראש -->
+                        <div class="relative shrink-0 flex-grow pt-4">
+                            <img src="coaching-main.png" alt="אימון אישי" class="w-full h-full object-cover object-top" style="object-position: top; max-height: 400px;">
+                        </div>
+                        <div class="p-6 pb-8 md:p-8 md:pb-10 flex flex-col justify-end">
+                            <h3 class="text-2xl font-bold mb-3">המחויבות שלי לתהליך שלך</h3>
+                            <p class="text-green-50 leading-relaxed text-base md:text-lg">
+                                בתהליך האימון אנו לא נשארים רק ברמת הדיבורים. אנחנו מציפים את חסמי העומק, מבינים מה מניע אותך באמת, ומפרקים את זה לתוכנית פעולה בהירה וישימה ביומיום, תוך ליווי אישי שלי לאורך כל הדרך.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- כפתור שאלון מעל ההמלצות -->
+        <section class="pt-16 pb-8 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                 <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
+                   target="_blank" 
+                   class="inline-flex items-center justify-center bg-primary-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all text-lg gap-3">
+                    <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm">
+                    לשאלון בדיקת התאמה לתהליך
+                </a>
+            </div>
+        </section>
+
+        <!-- המלצות בגוף האתר -->
+        <section class="py-16 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl">מה אומרים המתאמנים?</h2>
+                    <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- המלצה 1 -->
+                    <div class="bg-gray-50 p-8 md:p-10 rounded-3xl shadow-sm border-r-4 border-primary-green flex flex-col justify-between">
+                        <div class="text-gray-700 italic leading-relaxed text-base md:text-lg space-y-4 relative">
+                            <i data-lucide="quote" class="absolute -top-4 -right-4 h-10 w-10 text-gray-200 transform scale-x-[-1]"></i>
+                            <p>
+                                "אני רוצה להמליץ מכל הלב על בן, שליווה אותי בתהליך אימון במשך חצי שנה משמעותית מאוד עבורי. כבר מהמפגשים הראשונים היה לי ברור שמדובר באדם שמביא איתו נוכחות שקטה, קשובה ומכילה. בן יודע ליצור מרחב בטוח ונעים, כזה שמאפשר להיפתח באמת. זה משהו שלא מובן מאליו בכלל, ובתהליך כזה זה היה עבורי קריטי.
+                            </p>
+                            <p>
+                                אחת היכולות שהכי בלטו אצלו היא ההקשבה האמיתית לא רק לשמוע, אלא ממש להיות עם הדברים, לעבד, לשקף ולשאול שאלות מדויקות שמצליחות לגעת בדיוק בנקודות הנכונות. הרגשתי שהוא איתי לאורך כל הדרך, גם ברגעים של בלבול וגם ברגעים של פריצות דרך. בן מצליח לחבר בצורה טבעית בין פרטים קטנים לבין התמונה הרחבה יותר, ולעזור לראות דברים בפרספקטיבה אחרת, הרבה יותר בהירה ומדויקת. <span class="font-bold text-primary-green">לא פעם יצאתי ממפגש איתו עם הסתכלות חדשה לגמרי על סיטואציה שחשבתי שאני כבר מבינה.</span>
+                            </p>
+                            <p>
+                                מה שהכי משמעותי עבורי היה היכולת שלו לעורר חשיבה פתוחה וגמישה יותר. הוא לא מוביל לכיוון אחד, אלא באמת מזמין לחקור, לשאול, ולבחון דברים מזוויות שונות. <span class="font-bold text-primary-green">זה יצר אצלי תהליך עמוק של התבוננות פנימית ולמידה על עצמי.</span> אני מרגישה ברת מזל על הליווי שקיבלתי ממנו, וממליצה עליו בלב שלם לכל מי שמחפש תהליך אמיתי, עמוק ומדויק."
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-gray-200 flex items-center">
+                            <span class="font-bold text-primary-green text-lg">— ענבר</span>
+                        </div>
+                    </div>
+
+                    <!-- המלצה 2 -->
+                    <div class="bg-gray-50 p-8 md:p-10 rounded-3xl shadow-sm border-r-4 border-accent-green flex flex-col justify-between">
+                        <div class="text-gray-700 italic leading-relaxed text-base md:text-lg space-y-4 relative">
+                            <i data-lucide="quote" class="absolute -top-4 -right-4 h-10 w-10 text-gray-200 transform scale-x-[-1]"></i>
+                            <p>
+                                "השתתפתי בתהליך שלי עם בן בנושא מטרות וחשיבה חיובית. התהליך היה משמעותי עבורי ועזר לי לדייק מטרות אישיות, לשנות דפוסי חשיבה ולהתמקד בגישה חיובית יותר ביומיום. הרגשתי הקשבה, מקצועיות והכוונה מדויקת לאורך כל הדרך.
+                            </p>
+                            <p>
+                                <span class="font-bold text-primary-green">קיבלתי כלים שעוזרים לי לממש אותם במהלך היום יום, אני כבר מרגיש בשינוי.</span>
+                            </p>
+                            <p>
+                                בן היה מאוד מקצועי, עם הקשבה מרובה, וסבלנות לאורך כל הדרך. רציתי להגיד תודה ענקית על התהליך ועל מה שלימדת אותי, ממליץ בחום!!!"
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-gray-200 flex items-center">
+                            <span class="font-bold text-primary-green text-lg">— א.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- רוצה לבדוק אם זה מתאים לך? -->
+        <section class="py-24 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-3xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-primary-green mb-6">רוצה לבדוק אם זה מתאים לך?</h2>
+                <p class="text-xl text-gray-700 font-medium mb-4">
+                    השלב הראשון הוא לא התחייבות לתהליך.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
+                    זו שיחת התאמה קצרה שבה נבין איפה אתה נמצא, מה אתה מחפש, והאם תהליך אימון אישי הוא הכלי הנכון עבורך.
+                </p>
+                <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
+                   target="_blank" 
+                   class="inline-flex items-center justify-center bg-primary-green text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all text-lg gap-3">
+                    <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm">
+                    לשאלון בדיקת התאמה לתהליך
+                </a>
+            </div>
+        </section>
+
+        <!-- בואו נתחיל בשיחת היכרות קצרה -->
+        <section id="contact" class="bg-gray-900 text-white py-16 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold mb-4">בואו נתחיל בשיחת הכרות קצרה</h2>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto text-base">בלי שום התחייבות – נבין יחד איפה אתה נמצא עכשיו ואיך נוכל לייצר עבורך את הבהירות והדיוק קדימה.</p>
+
+                <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mb-10">
+                    <a href="mailto:ben.belity@gmail.com" class="group flex flex-col items-center gap-2" aria-label="שלח מייל לבן בליטי">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-primary-green">
+                            <img src="email-icon.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-xs text-gray-400">שלח מייל</span>
+                    </a>
+                    
+                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20לפרטים%20נוספים." target="_blank" class="group flex flex-col items-center gap-2" aria-label="פתח שיחת ווטסאפ עם בן בליטי">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-[#25D366]">
+                            <img src="whatsapp.png" alt="" class="w-full h-full object-cover p-1.5">
+                        </div>
+                        <span class="text-xs text-gray-400">ווטסאפ</span>
+                    </a>
+
+                    <a href="https://www.facebook.com/profile.php?id=61589761047815" target="_blank" class="group flex flex-col items-center gap-2" aria-label="עמוד הפייסבוק של בן בליטי">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-[#1877F2]">
+                            <img src="facebook.png" alt="" class="w-7 h-7 object-contain">
+                        </div>
+                        <span class="text-xs text-gray-400">פייסבוק</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/belitybencoach" target="_blank" class="group flex flex-col items-center gap-2" aria-label="עמוד האינסטגרם של בן בליטי">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-[#E1306C]">
+                            <img src="instagram.png" alt="" class="w-7 h-7 object-contain">
+                        </div>
+                        <span class="text-xs text-gray-400">אינסטגרם</span>
+                    </a>
+                </div>
+
+                <!-- לינק למאמניסטים -->
+                <div class="flex justify-center mt-6">
+                    <a href="https://www.hameamnistim.co.il/%D7%90%D7%99%D7%9E%D7%95%D7%9F/%D7%91%D7%9F-%D7%91%D7%9C%D7%99%D7%98%D7%99" 
+                       target="_blank" 
+                       class="inline-flex justify-center items-center bg-[#79247A] text-white font-bold py-3 px-8 text-sm md:text-base rounded-full hover:bg-[#5D1C5E] transition-all shadow-lg border border-transparent">
+                        לפרופיל שלי בפורטל המאמניסטים
+                        <img src="target.png" alt="מטרה" class="h-5 w-5 mr-2 object-contain">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- חלק מעבר לאתר הראשי / שירותי CFO -->
+        <section class="py-16 bg-white text-center border-t border-b border-gray-200 shadow-inner">
             <div class="max-w-4xl mx-auto px-4">
                 <h3 class="text-2xl font-bold text-gray-900 mb-3">מחפשים ליווי עסקי או פיננסי בכיר?</h3>
                 <p class="text-gray-600 mb-8 text-lg max-w-2xl mx-auto">למידע מורחב על שירותי סמנכ"ל כספים במיקור חוץ (Fractional CFO), ייעוץ אסטרטגי לחברות ומנטורינג אישי למנהלי כספים:</p>
-                <a href="index.html" class="inline-flex justify-center items-center bg-primary-green hover:bg-[#1a3826] text-white font-bold py-4 px-10 rounded-full transition-all shadow-xl hover:shadow-2xl hover:scale-105 gap-3 text-lg border border-transparent">
+                <a href="index.html" class="inline-flex justify-center items-center bg-primary-green hover:bg-[#1a3826] text-white font-bold py-4 px-10 rounded-full transition-all shadow-xl hover:scale-105 gap-3 text-lg border border-transparent">
                     <i data-lucide="briefcase" class="h-6 w-6"></i>
                     למעבר לאתר העסקי ושירותי Fractional CFO
                 </a>
@@ -372,43 +573,45 @@
         </section>
     </main>
 
-    <!-- פוטר -->
-    <footer id="contact" class="bg-gray-900 text-white py-16 text-center">
+    <!-- פוטר נקי ומינימליסטי -->
+    <footer class="bg-gray-50 py-8 text-center border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-4">בואו נתחיל בשיחת הכרות קצרה</h2>
-            <p class="text-gray-400 mb-8 max-w-xl mx-auto text-base">בלי שום התחייבות – נבין יחד איפה אתה נמצא עכשיו ואיך נוכל לייצר עבורך את הבהירות והדיוק קדימה.</p>
-
-            <div class="flex justify-center gap-8 mb-12">
-                <a href="mailto:ben.belity@gmail.com" class="group flex flex-col items-center gap-2" aria-label="שלח מייל לבן בליטי">
-                    <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-primary-green">
-                        <img src="email-icon.jpg" alt="" class="w-full h-full object-cover">
-                    </div>
-                    <span class="text-xs text-gray-400">שלח מייל</span>
-                </a>
-                
-                <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20לפרטים%20נוספים." target="_blank" class="group flex flex-col items-center gap-2" aria-label="פתח שיחת ווטסאפ עם בן בליטי">
-                    <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-[#25D366]">
-                        <img src="whatsapp.png" alt="" class="w-full h-full object-cover p-1.5">
-                    </div>
-                    <span class="text-xs text-gray-400">ווטסאפ</span>
-                </a>
-            </div>
-            
-            <p class="text-xs text-gray-600">&copy; 2026 Ben Belity. All rights reserved.</p>
+            <p class="text-sm text-gray-500">&copy; 2026 Ben Belity. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- כפתור ווטסאפ צף -->
-    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20להתייעץ%20איתך." target="_blank" aria-label="שלח לי הודעה בוואטסאפ" class="whatsapp-float-btn fixed bottom-6 left-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 z-50 transition-all flex items-center justify-center">
-        <img src="whatsapp.png" alt="" class="h-8 w-8 object-contain bg-white rounded-full p-1" aria-hidden="true">
-    </a>
+    <!-- כפתורים צפים -->
+    <div class="fixed bottom-6 left-6 z-50 flex items-end gap-4">
+        <!-- כפתור ווטסאפ -->
+        <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהפרסום%20על%20האימון%20האישי%2C%20אשמח%20להתייעץ%20איתך." target="_blank" aria-label="שלח לי הודעה בוואטסאפ" class="bg-[#25D366] text-white p-2 rounded-full shadow-lg hover:scale-110 transition-all flex items-center justify-center h-12 w-12 mb-2">
+            <img src="whatsapp.png" alt="ווטסאפ" class="h-7 w-7 object-contain bg-white rounded-full p-1 border-2 border-white">
+        </a>
 
-    <!-- חלון קופץ נגיש - כפתור סגירה (X) מעוצב בירוק ובולט כפי שביקשת -->
+        <!-- כפתור עץ ירוק המוביל לגוגל פורמס -->
+        <div class="relative group">
+            <a href="https://forms.gle/7ZkwrhwzT346UUJe7" target="_blank" aria-label="לשאלון בדיקת התאמה לתהליך" class="tree-float-btn bg-white border-2 border-primary-green text-primary-green p-2.5 rounded-full shadow-2xl hover:scale-110 transition-all flex items-center justify-center h-16 w-16 relative z-10">
+                <img src="logo.png" alt="עץ ירוק" class="h-full w-full object-cover rounded-full">
+            </a>
+            <!-- טקסט מעוצב בחצי עיגול סביב הכפתור -->
+            <div class="curved-text-container" style="width: 96px; height: 96px; top: -16px; left: -16px;">
+                <svg viewBox="0 0 100 100">
+                    <path id="curve" fill="transparent" d="M 12 50 A 38 38 0 1 1 88 50 A 38 38 0 1 1 12 50" />
+                    <text>
+                        <textPath href="#curve" startOffset="0%" text-anchor="start">
+                            לשאלון התאמה • לשאלון התאמה • 
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- חלון קופץ נגיש לחלוטין (Modal Dialog) -->
     <div id="textModal" class="modal-overlay" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content relative text-right flex flex-col" onclick="event.stopPropagation()">
             <!-- כפתור סגירה צף קבוע בטופ שמאלה של החלונית בזמן גלילה -->
             <button id="modalCloseBtn" onclick="closeModal(event)" class="sticky top-0 float-left align-middle self-start p-2.5 text-white bg-primary-green hover:bg-[#234a38] rounded-full focus:outline-none focus:ring-2 focus:ring-primary-green transition-all z-50 shadow-sm border border-gray-100 backdrop-blur-sm" aria-label="סגור חלון קופץ">
-                <i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i>
+                <i data-lucide="x" class="h-5 w-5 bg-primary-green text-white rounded-full p-1" aria-hidden="true"></i>
             </button>
             <div id="modalContentArea" class="mt-2 pr-2"></div>
         </div>
@@ -416,13 +619,6 @@
 
     <script>
         lucide.createIcons();
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('coaching-process-text');
-            if (container && typeof contentTexts !== 'undefined' && contentTexts.coaching) {
-                container.innerHTML = contentTexts.coaching;
-            }
-        });
 
         function openModal(textKey) {
             const modal = document.getElementById('textModal');
