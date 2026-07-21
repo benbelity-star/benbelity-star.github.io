@@ -11,111 +11,75 @@
       function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-18209679993');
-	gtag('config', 'G-6JPMQNBQXJ');
+        gtag('config', 'G-6JPMQNBQXJ');
     </script>
 
     <title>בן בליטי | Fractional CFO, מנטור ומאמן אישי</title>
     <meta name="description" content="בן בליטי - סמנכ'ל כספים במיקור חוץ, מנטור למנהלים ומאמן אישי. בהירות, תובנה וצמיחה עסקית ואישית.">
-    <link class="canonical" href="https://www.benbelity.com/">
+    <!-- תוקן משגיאת class ל-rel -->
+    <link rel="canonical" href="https://www.benbelity.com/">
     
     <!-- Open Graph / Facebook / WhatsApp Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.benbelity.com/">
-    <meta property="og:title" content="בן בליטי | Fractional CFO, מנטור ומאמן אישי">
-    <meta property="og:description" content="ליווי מנהלי כספים וצמיחה עסקית. שילוב של חשיבה אסטרטגית עם ביצוע Hands-on בשטח.">
+    <meta property="og:title" content="בן בליטי | מנטור פיננסי ו-Fractional CFO">
+    <meta property="og:description" content="ליווי אנשי כספים וחברות בצמתי צמיחה ושינוי לבניית בהירות פיננסית והשפעה עסקית.">
     <meta property="og:image" content="front3.png">
 
-    <!-- פאביקון -->
     <link rel="icon" href="logo.png" type="image/png">
-    
-    <!-- פונט Rubik -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- אייקונים -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
-
-    <!-- טעינת קובץ הטקסטים החיצוני -->
     <script src="texts.js"></script>
 
     <style>
-        body {
-            font-family: 'Rubik', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
+        body { font-family: 'Rubik', sans-serif; scroll-behavior: smooth; }
         :focus-visible { outline: 3px solid #2E5C46 !important; outline-offset: 3px !important; }
-
         .fade-in { animation: fadeIn 1.5s ease-in-out; }
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
         .text-primary-green { color: #2E5C46; } 
         .bg-primary-green { background-color: #2E5C46; }
         .text-accent-green { color: #6B9080; } 
         
         .social-btn { transition: all 0.3s ease; }
-        .social-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
+        .social-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
         
         .profile-image-container { position: relative; }
         .profile-image-container::after {
-            content: '';
-            position: absolute;
-            top: -5px; left: -5px; right: -5px; bottom: -5px;
-            border-radius: 50%;
-            border: 1px solid rgba(46, 92, 70, 0.2);
-            z-index: -1;
+            content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border-radius: 50%; border: 1px solid rgba(46, 92, 70, 0.2); z-index: -1;
         }
 
-        /* עיצוב החלון הקופץ (Modal) */
         .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 1000;
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); z-index: 1000; backdrop-filter: blur(8px);
+            opacity: 0; transition: opacity 0.3s ease;
         }
         .modal-overlay.active { display: flex; align-items: center; justify-content: center; opacity: 1; }
         .modal-content {
-            background-color: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            width: 90%;
-            max-width: 650px;
-            max-height: 85vh;
-            overflow-y: auto;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            background-color: white; padding: 2.5rem; border-radius: 1.5rem; width: 90%;
+            max-width: 650px; max-height: 85vh; overflow-y: auto; transform: translateY(20px);
+            transition: transform 0.3s ease; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
         .modal-overlay.active .modal-content { transform: translateY(0); }
 
-        /* אנימציה לכפתור ווטסאפ צף */
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        .whatsapp-float-btn {
-            animation: pulse-green 2s infinite;
-        }
+        .whatsapp-float-btn { animation: pulse-green 2s infinite; }
+        section[id] { scroll-margin-top: 80px; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-light selection:bg-green-100 selection:text-primary-green relative">
 
-    <!-- ניווט עליון -->
     <nav aria-label="ניווט ראשי" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -127,8 +91,7 @@
                 </div>
                 <div class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium">
                     <a href="#about" class="text-gray-600 hover:text-primary-green transition-colors">אודות</a>
-                    <a href="#services" class="text-gray-600 hover:text-primary-green transition-colors">פתרונות עסקיים</a>
-                    <a href="#coaching" class="text-gray-600 hover:text-primary-green transition-colors">התפתחות אישית</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary-green transition-colors">איך נעבוד יחד?</a>
                     <a href="#insights" class="text-gray-600 hover:text-primary-green transition-colors">טקסטים נבחרים</a>
                     <a href="#contact" class="text-gray-600 hover:text-primary-green transition-colors">צור קשר</a>
                 </div>
@@ -141,8 +104,7 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full px-6 py-4 space-y-4 text-right">
             <a href="#about" class="block text-base font-medium text-gray-700 hover:text-primary-green">אודות</a>
-            <a href="#services" class="block text-base font-medium text-gray-700 hover:text-primary-green">פתרונות עסקיים</a>
-            <a href="#coaching" class="block text-base font-medium text-gray-700 hover:text-primary-green">התפתחות אישית</a>
+            <a href="#services" class="block text-base font-medium text-gray-700 hover:text-primary-green">איך נעבוד יחד?</a>
             <a href="#insights" class="block text-base font-medium text-gray-700 hover:text-primary-green">טקסטים נבחרים</a>
             <a href="#contact" class="block text-base font-medium text-gray-700 hover:text-primary-green">צור קשר</a>
         </div>
@@ -154,23 +116,27 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in">
                 
                 <div class="mx-auto h-48 w-48 md:h-64 md:w-64 mb-10 rounded-full shadow-2xl overflow-hidden bg-white border-4 border-white profile-image-container">
-                    <img src="front3.png" alt="בן בליטי - Fractional CFO ומאמן אישי" class="object-cover w-full h-full transform hover:scale-105 transition duration-700">
+                    <img src="front3.png" alt="בן בליטי - מאמן ומנטור פיננסי" class="object-cover w-full h-full transform hover:scale-105 transition duration-700">
                 </div>
 
                 <h1 class="mb-6 flex flex-col items-center">
-                    <span class="text-4xl tracking-tight font-extrabold text-primary-green sm:text-5xl md:text-6xl mb-4">בן בליטי</span>
-                    <span class="max-w-md mx-auto text-lg text-gray-600 sm:text-xl md:max-w-3xl leading-relaxed font-medium">Fractional CFO | Advisor | Mentor</span>
+                    <span class="text-3xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-primary-green mb-6 leading-tight max-w-5xl">
+                        מנטורינג פיננסי, ליווי ניהולי <br>ו־Fractional CFO <br class="hidden md:block">לאנשי כספים וחברות בצמיחה
+                    </span>
+                    <span class="max-w-3xl mx-auto text-lg text-gray-600 sm:text-xl leading-relaxed font-medium px-4">
+                        אני מלווה אנשי כספים, מנהלי כספים וחברות בצמתי צמיחה ושינוי — כדי לחזק את תפקיד הכספים כשותף עסקי משמעותי: עם יותר בהירות, חשיבה עסקית, ניהול ממשקים, וקבלת החלטות פיננסיות טובות יותר.
+                    </span>
                 </h1>
-
-                <div class="mt-6 flex justify-center items-center space-x-4 space-x-reverse">
-                    <div class="h-px w-12 bg-accent-green opacity-50"></div>
-                    <p class="text-xl md:text-2xl font-light text-accent-green tracking-widest uppercase">Clarity. Insight. Growth.</p>
-                    <div class="h-px w-12 bg-accent-green opacity-50"></div>
-                </div>
                 
                 <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4 px-4">
-                    <a href="#contact" class="bg-primary-green text-white px-10 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all w-full sm:w-auto text-lg">בוא נדבר</a>
-                    <a href="#services" class="bg-white text-gray-700 border border-gray-300 px-10 py-4 rounded-full font-medium hover:bg-gray-50 transition-all w-full sm:w-auto text-lg">למידע נוסף</a>
+                    <a href="finance-mentoring.html" class="bg-primary-green text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all w-full sm:w-auto text-lg flex justify-center items-center gap-2">
+                        <i data-lucide="trending-up" class="h-5 w-5"></i>
+                        למנטורינג לאנשי כספים
+                    </a>
+                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20אשמח%20לקבוע%20שיחת%20היכרות." target="_blank" class="bg-white text-gray-700 border-2 border-gray-200 px-10 py-4 rounded-full font-bold hover:border-primary-green hover:text-primary-green transition-all w-full sm:w-auto text-lg flex justify-center items-center gap-2">
+                        <img src="whatsapp.png" alt="WhatsApp" class="h-5 w-5 grayscale opacity-60">
+                        לשיחת היכרות
+                    </a>
                 </div>
             </div>
             
@@ -178,25 +144,110 @@
             <div aria-hidden="true" class="absolute bottom-0 right-0 -mr-20 -mb-20 w-96 h-96 rounded-full bg-green-100 opacity-40 blur-3xl"></div>
         </header>
 
+        <!-- איך אפשר לעבוד איתי -->
+        <section id="services" class="py-24 bg-[#1a3826] relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">Business & Finance</span>
+                    <h2 class="text-3xl font-bold text-white sm:text-4xl mt-2">איך אפשר לעבוד איתי?</h2>
+                    <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                    
+                    <!-- 1. מנטורינג (Highlight Card - Spans full width) -->
+                    <div class="md:col-span-2 bg-white rounded-3xl shadow-2xl transition-all duration-300 p-8 md:p-10 flex flex-col md:flex-row gap-8 border-t-8 border-accent-green relative overflow-hidden">
+                        <div class="absolute top-0 left-0 bg-accent-green text-white px-4 py-1 rounded-br-lg text-sm font-bold z-10">המסלול המרכזי</div>
+                        
+                        <div class="md:w-1/3 shrink-0 h-56 md:h-auto rounded-2xl overflow-hidden relative shadow-inner">
+                            <img src="mentoring.png" alt="מנטורינג לאנשי כספים" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="bg-green-50 p-2 rounded-lg text-primary-green"><i data-lucide="target" class="h-6 w-6"></i></div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900">מנטורינג לאנשי ולמנהלי כספים</h3>
+                            </div>
+                            
+                            <p class="text-lg text-primary-green font-medium mb-4">
+                                ליווי אישי לאנשי FP&A, חשבים, Controllers, Finance Managers, Heads of Finance ו־CFOs שנמצאים בצומת מקצועי־ניהולי או רוצים לחזק את ההשפעה שלהם בארגון.
+                            </p>
+                            <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                                מיועד לאנשי כספים מנוסים שרוצים לחשוב עסקית יותר, לנהל ממשקים טוב יותר, להציג תובנות ולא רק דוחות, ולבנות יחד מפת דרך להמשך ההתפתחות המקצועית והניהולית שלהם.
+                            </p>
+                            
+                            <div class="mt-auto flex flex-col sm:flex-row gap-4">
+                                <a href="finance-mentoring.html" class="flex items-center justify-center bg-primary-green text-white font-bold transition-colors hover:bg-[#234a38] rounded-full py-3 px-8 w-full sm:w-auto shadow-md">
+                                    לכל הפרטים על המנטורינג
+                                    <i data-lucide="chevron-left" class="h-5 w-5 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Fractional CFO -->
+                    <div class="bg-white rounded-3xl shadow-xl transition-all duration-300 p-8 flex flex-col h-full border-t-4 border-gray-200 hover:border-primary-green">
+                        <div class="mb-6 w-full h-48 rounded-xl overflow-hidden relative shadow-sm">
+                            <img src="frac_cfo.png" alt="Fractional CFO" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <i data-lucide="briefcase" class="h-6 w-6 text-primary-green"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">Fractional CFO & Advisor</h3>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                ליווי חברות בצמיחה שזקוקות להובלה פיננסית בכירה ללא התחייבות למשרה מלאה. בניית תשתיות כספיות, שיפור בקרה ודיווח, ניהול תקציב ותזרים ותמיכה אסטרטגית בקבלת החלטות להנהלה ולדירקטוריון.
+                            </p>
+                        </div>
+                        <button onclick="openModal('cfo')" class="mt-auto flex items-center justify-center text-primary-green hover:text-white font-medium transition-colors border-2 border-primary-green hover:bg-primary-green rounded-xl py-3 px-4 w-full">
+                            קרא עוד על השירות
+                        </button>
+                    </div>
+
+                    <!-- 3. אימון אישי -->
+                    <div class="bg-white rounded-3xl shadow-xl transition-all duration-300 p-8 flex flex-col h-full border-t-4 border-gray-200 hover:border-primary-green">
+                        <div class="mb-6 w-full h-48 rounded-xl overflow-hidden relative shadow-sm">
+                            <img src="coaching-main.png" alt="אימון אישי פרקטי" class="w-full h-full object-cover" style="object-position: center 20%;">
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <i data-lucide="compass" class="h-6 w-6 text-primary-green"></i>
+                            <h3 class="text-2xl font-bold text-gray-900">אימון אישי פרקטי</h3>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                תהליך אישי לאנשים מתפקדים ומנהלים שנמצאים בצומת, חווים שחיקה שקטה, תקיעות או חוסר דיוק — ורוצים לעצור רגע, לעשות סדר ולבנות צעדים מעשיים קדימה בלי לקבל החלטות פזיזות.
+                            </p>
+                        </div>
+                        <a href="coaching.html" class="mt-auto flex items-center justify-center text-gray-600 hover:text-gray-900 font-medium transition-colors border-2 border-gray-200 hover:border-gray-400 hover:bg-gray-50 rounded-xl py-3 px-4 w-full">
+                            קרא עוד על תהליך האימון
+                            <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
         <!-- אודות -->
         <section id="about" class="py-24 bg-white relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">הסיפור שלי</span>
-                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl mt-2">מעבר למספרים</h2>
+                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl mt-2">למה דווקא אני?</h2>
                     <div class="w-20 h-1.5 bg-accent-green mx-auto mt-6 rounded-full opacity-60"></div>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-right">
                     <div class="text-gray-600 leading-relaxed text-lg space-y-4">
                         <p class="font-medium text-gray-800 text-xl">
-                            המטרה שלי היא לייצר בהירות למקבלי ההחלטות, להעניק שקט נפשי ולבנות את היסודות הפיננסיים שמאפשרים לארגון ולמנהלים שבו לרוץ קדימה
+                            המטרה שלי היא לייצר בהירות למקבלי ההחלטות, להעניק שקט נפשי ולבנות את היסודות שיאפשרו לארגון ולמנהלים שבו לרוץ קדימה.
                         </p>
                         <p>
                             אחרי קרוב לשני עשורים בהובלת מערכים פיננסיים, כולל שש שנים כסמנכ"ל הכספים (CFO) של <strong>מעבדות רפא</strong>, הבנתי שתפקיד איש הכספים הוא הרבה מעבר לדוחות. הוא עוסק במנהיגות, בחיבור בין אנשים ובקבלת החלטות אמיצה.
                         </p>
                         <p>
-                            הובלתי תהליכים אסטרטגיים מורכבים – ממיזוגים ורכישות (M&A), דרך הטמעת מערכות מידע ועד לרכישה על ידי קרן פימי והובלת הטרנספורמציה בשנים שלאחר מכן. כיום, אני משלב את הניסיון העסקי העשיר עם עולמות האימון האישי והמנטורינג, כדי לתת מעטפת שלמה למנהלים וארגונים.
+                            הובלתי תהליכים אסטרטגיים מורכבים – ממיזוגים ורכישות (M&A), דרך הטמעת מערכות מידע ועד להובלת טרנספורמציה ארגונית. כיום, אני משלב את הניסיון העסקי העשיר עם עולמות האימון האישי והמנטורינג, כדי לתת מעטפת שלמה למנהלי כספים וארגונים.
                         </p>
                     </div>
                     
@@ -212,19 +263,15 @@
                             <ul class="space-y-4">
                                 <li class="flex items-start">
                                     <i data-lucide="check" class="h-5 w-5 text-accent-green ml-3 mt-1 shrink-0"></i>
-                                    <span class="text-gray-600">שילוב נדיר בין ראייה מערכתית, פיננסית ותפעולית להבנה אנושית עמוקה</span>
+                                    <span class="text-gray-600">שילוב נדיר בין ראייה מערכתית ופיננסית להבנה אנושית ופסיכולוגית עמוקה</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i data-lucide="check" class="h-5 w-5 text-accent-green ml-3 mt-1 shrink-0"></i>
-                                    <span class="text-gray-600">ניסיון שטח מוכח בחברות צומחות ובשינויים ארגוניים</span>
+                                    <span class="text-gray-600">ניסיון שטח מוכח בחברות צומחות ובשינויים ארגוניים מורכבים</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i data-lucide="check" class="h-5 w-5 text-accent-green ml-3 mt-1 shrink-0"></i>
-                                    <span class="text-gray-600">ניסיון בהובלת תהליכים עסקיים ופיננסיים מורכבים</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-lucide="check" class="h-5 w-5 text-accent-green ml-3 mt-1 shrink-0"></i>
-                                    <span class="text-gray-600">ניסיון מעשי ('Hands-on') בבניית מחלקות כספים ותפעול</span>
+                                    <span class="text-gray-600">ניסיון מעשי ('Hands-on') בבניית מחלקות כספים, תהליכי בקרה ותפעול</span>
                                 </li>
                             </ul>
                         </div>
@@ -233,150 +280,8 @@
             </div>
         </section>
 
-        <!-- פתרונות עסקיים -->
-        <section id="services" class="py-24 bg-[#1a3826] relative overflow-hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-16">
-                    <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">Business & Finance</span>
-                    <h2 class="text-3xl font-bold text-white sm:text-4xl mt-2">פתרונות עסקיים ומקצועיים</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
-                    
-                    <!-- Fractional CFO -->
-                    <div class="bg-white rounded-2xl shadow-xl transition-all duration-300 p-8 flex flex-col h-full border-t-4 border-accent-green">
-                        <div class="mb-6 w-full h-48 rounded-xl overflow-hidden relative shadow-sm">
-                            <img src="frac_cfo.png" alt="Fractional CFO" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Fractional CFO & Advisor</h3>
-                        <h4 class="text-lg font-medium text-primary-green mb-4">CFO במיקור חוץ</h4>
-                        <div class="flex-grow">
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                מנהיגות פיננסית בכירה לארגונים בצמיחה או שינוי (Scale-up, M&A), ללא התחייבות למשרה מלאה. שילוב של חשיבה אסטרטגית ברמת דירקטוריון עם ביצוע Hands-on, לבניית תשתית פיננסית שמעניקה למנכ"ל שקט, ודאות ושותף אמיתי לדרך.
-                            </p>
-                        </div>
-                        
-                        <button onclick="openModal('cfo')" class="mt-auto flex items-center justify-center text-primary-green hover:text-[#1a3826] font-medium transition-colors border border-primary-green hover:bg-green-50 rounded-lg py-3 px-4 w-full">
-                            קרא עוד
-                            <i data-lucide="plus" class="h-4 w-4 mr-2"></i>
-                        </button>
-                    </div>
-
-                    <!-- Mentoring -->
-                    <div class="bg-white rounded-2xl shadow-xl transition-all duration-300 p-8 flex flex-col h-full border-t-4 border-accent-green">
-                        <div class="mb-6 w-full h-48 rounded-xl overflow-hidden relative shadow-sm">
-                            <img src="mentoring.png" alt="מנטורינג למנהלים" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-1">מנטורינג למנהלים</h3>
-                        <h4 class="text-lg font-medium text-primary-green mb-4">ליווי אישי ותפקודי</h4>
-                        <div class="flex-grow">
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                ליווי מנהלי כספים – לשיפור ביצועים אישיים ותפקוד המחלקה:
-                            </p>
-                            <ul class="space-y-3 mb-6 text-gray-600 leading-relaxed text-sm">
-                                <li class="flex items-start"><i data-lucide="chevron-left" class="h-5 w-5 text-accent-green ml-2 mt-0.5 shrink-0"></i>הופך מנהלי כספים מ"אנשי דוחות" לשותפים עסקיים ומנהיגים</li>
-                                <li class="flex items-start"><i data-lucide="chevron-left" class="h-5 w-5 text-accent-green ml-2 mt-0.5 shrink-0"></i>תהליך מובנה של אבחון וחיזוק מחלקת הכספים</li>
-                                <li class="flex items-start"><i data-lucide="chevron-left" class="h-5 w-5 text-accent-green ml-2 mt-0.5 shrink-0"></i>מגדיל את סיכויי ההצלחה של גיוס יקר ומצמצם שחיקה בתפקיד</li>
-                            </ul>
-                        </div>
-                        
-                        <button onclick="openModal('mentoring')" class="mt-auto flex items-center justify-center text-accent-green hover:text-primary-green font-medium transition-colors border border-accent-green hover:bg-green-50 rounded-lg py-3 px-4 w-full">
-                            קרא עוד
-                            <i data-lucide="plus" class="h-4 w-4 mr-2"></i>
-                        </button>
-                    </div>
-
-                </div>
-
-                <!-- מתי לפנות - עסקי -->
-                <div class="border-t border-white/10 pt-16">
-                    <h3 class="text-2xl font-bold text-white mb-10 text-center">מתי נכון לשלב אותי בארגון?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 text-white hover:bg-white/10 transition-colors">
-                            <h4 class="text-lg font-semibold mb-2 flex items-center">
-                                <i data-lucide="trending-up" class="ml-2 h-5 w-5 text-accent-green"></i>צמיחה מהירה
-                            </h4>
-                            <p class="text-green-50 text-sm leading-relaxed">בניית אופרציה סקיילבילית, נראות תזרימית ומנגנוני בקרה</p>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 text-white hover:bg-white/10 transition-colors">
-                            <h4 class="text-lg font-semibold mb-2 flex items-center">
-                                <i data-lucide="activity" class="ml-2 h-5 w-5 text-accent-green"></i>אתגרים תפעוליים
-                            </h4>
-                            <p class="text-green-50 text-sm leading-relaxed">לחץ תזרימי. אי בהירות בתכנון קדימה. קשיים בתמחור ובמכרזים. צמיחה איטית.</p>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 text-white hover:bg-white/10 transition-colors">
-                            <h4 class="text-lg font-semibold mb-2 flex items-center">
-                                <i data-lucide="file-search" class="ml-2 h-5 w-5 text-accent-green"></i>M&A ומכירה
-                            </h4>
-                            <p class="text-green-50 text-sm leading-relaxed">הכנת החברה למשקיעים, בדיקת נאותות, ובניית הסיפור הפיננסי הצופה פני עתיד.</p>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 text-white hover:bg-white/10 transition-colors">
-                            <h4 class="text-lg font-semibold mb-2 flex items-center">
-                                <i data-lucide="shuffle" class="ml-2 h-5 w-5 text-accent-green"></i>נקודות מפנה
-                            </h4>
-                            <p class="text-green-50 text-sm leading-relaxed">שינויי הנהלה, שינוי כיוון עסקי (Pivot), או גיוס הון</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 text-center bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-white/10 shadow-lg relative">
-                     <p class="text-xl md:text-2xl text-white font-medium italic max-w-4xl mx-auto leading-relaxed">
-                        גוף כספים קיים כדי לייצר ערך: לא בסיסמה אלא הלכה למעשה- לסגור מעגלים, ליצור בהירות, לחבר בין ההווה לעתיד, להבין לעומק את המשמעות של כל החלטה, ולוודא שהכול מתפקד בביטחון ובשליטה. כשזה קורה, הערך כבר לא נמצא בסיסמאות, אלא בתוצאות.
-                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- חלק אימון אישי -->
-        <section id="coaching" class="py-24 bg-gray-50 relative overflow-hidden">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="text-center mb-16">
-                    <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">Personal Growth</span>
-                    <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mt-2 text-primary-green">צמיחה והתפתחות אישית</h2>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">כי מגיע לך לאהוב את העשייה שלך</p>
-                </div>
-
-                <div class="bg-primary-green rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row mb-12">
-                    <div class="md:w-5/12 relative h-56 md:h-auto">
-                        <img src="coaching-main.png" alt="אימון אישי" class="w-full h-full object-cover object-top">
-                    </div>
-
-                    <div class="md:w-7/12 p-8 md:p-10 flex flex-col justify-center text-white relative bg-primary-green">
-                        <h3 class="text-2xl font-bold mb-4 relative z-10">אימון אישי למנהלים ולאנשים הישגיים</h3>
-                        <p class="text-green-50 mb-6 leading-relaxed text-base relative z-10">
-                            מרחב שקט ומובנה למי שרוצים לפרוץ תקרות זכוכית, לייצר בהירות בצמתי החלטה ולחבר בין הצלחה לסיפוק. תהליך אימון אישי קצר וממוקד לעשיית סדר, זיהוי מה שכבר פחות מדויק ותרגום המטרות לצעדים מעשיים בשטח.
-                        </p>
-                        <blockquote class="text-base text-white font-medium italic border-r-4 border-accent-green pr-4 mb-8 relative z-10">
-                            הדיוק הפנימי הוא המפתח לפריצה חיצונית
-                        </blockquote>
-
-                        <div class="flex flex-col sm:flex-row gap-4 items-center">
-                            <a href="https://www.hameamnistim.co.il/%D7%90%D7%99%D7%9E%D7%95%D7%9F/%D7%91%D7%9F-%D7%91%D7%9C%D7%99%D7%98%D7%99" 
-                               target="_blank" 
-                               class="inline-flex justify-center items-center bg-[#79247A] text-white font-bold py-3 px-6 text-sm rounded-full hover:bg-[#5D1C5E] transition-all shadow-lg z-10 w-full sm:w-auto">
-                                לדף האישי בפורטל המאמניסטים
-                                <img src="target.png" alt="מטרה" class="h-5 w-5 mr-2 object-contain">
-                            </a>
-                            
-                            <a href="coaching.html" 
-                               class="inline-flex justify-center items-center bg-white text-primary-green font-bold py-3 px-6 text-sm rounded-full hover:bg-gray-100 transition-all shadow-lg z-10 w-full sm:w-auto mt-2 sm:mt-0 border border-transparent">
-                                לעמוד האימון המלא
-                                <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- טקסטים נבחרים (LinkedIn Posts) - שוחזרו ל-8 פוסטים מלאים -->
-        <section id="insights" class="py-24 relative border-t border-gray-100 overflow-hidden">
-            <div class="absolute inset-0 z-0 pointer-events-none">
-                <img src="focus.jpg" alt="" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 bg-white/70"></div>
-            </div>
-            
+        <!-- טקסטים נבחרים (8 פוסטים שוחזרו) -->
+        <section id="insights" class="py-24 relative border-t border-gray-100 overflow-hidden bg-gray-50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-12">
                     <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">Insights & Perspectives</span>
@@ -386,106 +291,76 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                   <!-- פוסט 0 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_cfo-financeleadership-fpanda-share-7467814376008454145-OUHH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAATVNokBqg4nyFSN6GC4YuKNEIXoZiyCtmU" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                   <!-- פוסט 1 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_cfo-financeleadership-fpanda-share-7467814376008454145-OUHH" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "הצילו! AI, או - האם ה AI יחליף את אנשי הכספים?"
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
  
+                   <!-- פוסט 2 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_%D7%94%D7%94%D7%9B%D7%A1%D7%A4%D7%99%D7%9D-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9E%D7%93%D7%95%D7%95%D7%97%D7%AA-%D7%A2%D7%9C-%D7%94%D7%A2%D7%A1%D7%A7-%D7%90%D7%95-%D7%9E%D7%95%D7%91%D7%99%D7%9C%D7%94-activity-7464366407485509633-0ewi" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                        <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                        <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
+                            "מחלקת הכספים שלכם - מדווחת על העסק או מובילה אותו? על התפקיד האמיתי של ה-CFO."
+                        </p>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
+                    </a>
 
-
-
-                   <!-- פוסט 1 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_%D7%90%D7%A0%D7%99-%D7%96%D7%95%D7%9B%D7%A8-%D7%90%D7%AA-%D7%94%D7%99%D7%9E%D7%99%D7%9D-%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9B-cfo-%D7%95%D7%95-activity-7460679023682256896-AB8p" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                   <!-- פוסט 3 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_%D7%90%D7%A0%D7%99-%D7%96%D7%95%D7%9B%D7%A8-%D7%90%D7%AA-%D7%94%D7%99%D7%9E%D7%99%D7%9D-%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9B-cfo-%D7%95%D7%95-activity-7460679023682256896-AB8p" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "אף אחד לא נולד CFO. איך מבטיחים את הצלחת איש הכספים הבכיר בארגון?"
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
 
-                    <!-- פוסט 2 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_highachievers-personalgrowth-innerwork-share-7454787258332639232-sZq4" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                    <!-- פוסט 4 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_highachievers-personalgrowth-innerwork-share-7454787258332639232-sZq4" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "יש בכם חוסר שקט. זה מתבטא בחוסר שביעות רצון מהתפקיד, או מהממונים, או מהתמורה. אבל למה זה קורה? ומה אפשר לעשות?"
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
 
-                    <!-- פוסט 3 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_personalgrowth-cfo-fpanda-share-7438979425754472448-22L5" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                    <!-- פוסט 5 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_personalgrowth-cfo-fpanda-share-7438979425754472448-22L5" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "איך מתקדמים בקריירה ובחיים, על אף "נתוני הפתיחה" שלנו, הניסיון הלא-מושלם או התואר הלא-מדויק?"
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
 
-                    <!-- פוסט 4 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_cfoleadership-financetransformation-fromreportingtoimpact-share-7406776540740534272-C-8X" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                    <!-- פוסט 6 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_cfoleadership-financetransformation-fromreportingtoimpact-share-7406776540740534272-C-8X" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "אפשר להיות מקצועי, חרוץ ומדויק – ועדיין לא להיות רלוונטי. למה זה קורה למחלקות כספים, ואיך יוצאים מזה באמת."
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
                     
-                    <!-- פוסט 5 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_cfoleadership-financetransformation-executivemindset-share-7400792104374964224-vGS6" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                    <!-- פוסט 7 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_cfoleadership-financetransformation-executivemindset-share-7400792104374964224-vGS6" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "די לתנועה על גבי העקומה! הגיע הזמן לדחוף אותה למעלה."
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
 
-                    <!-- פוסט 6 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_cfoleadership-financetransformation-executivemindset-share-7404448310889115648-HoiS" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
-                        <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
-                        <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
-                            "מנהלים – אתם עושים באמת, או רק עושים את התנועות?"
-                        </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
-                    </a>
-
-                    <!-- פוסט 7 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_financeleadership-cfo-financefunction-share-7398360689083330560-h_Oi" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
+                    <!-- פוסט 8 -->
+                    <a href="https://www.linkedin.com/posts/benbelity_financeleadership-cfo-financefunction-share-7398360689083330560-h_Oi" target="_blank" class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
                         <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
                         <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
                             "משחיקה וחוסר הערכה, להובלה והשפעה ארגונית."
                         </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
-                    </a>
-
-                    <!-- פוסט 8 -->
-                    <a href="https://www.linkedin.com/posts/benbelity_%D7%90%D7%97%D7%93-%D7%94%D7%93%D7%91%D7%A8%D7%99%D7%9D-%D7%A9%D7%94%D7%A8%D7%92%D7%A9%D7%AA%D7%99-%D7%A2%D7%9D-%D7%94%D7%99%D7%A6%D7%99%D7%90%D7%94-%D7%9C%D7%93%D7%A8%D7%9A-%D7%94%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%AA-activity-7387047446465396737-dsjy" target="_blank" class="flex flex-col p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 hover:border-[#0077b5] hover:shadow-lg transition-all group h-full">
-                        <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80 group-hover:opacity-100 transition-opacity"></i>
-                        <p class="text-gray-700 text-sm font-medium leading-relaxed group-hover:text-gray-900 flex-grow">
-                            "מה באמת עושה CFO מצוין, ואיך הוא מייצר ערך לארגון, לא בסיסמה, אלא במציאות היומיומית."
-                        </p>
-                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">
-                            קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i>
-                        </span>
+                        <span class="text-[#0077b5] text-xs font-bold mt-4 flex items-center">קרא עוד <i data-lucide="arrow-left" class="h-3 w-3 mr-1"></i></span>
                     </a>
                 </div>
             </div>
@@ -493,14 +368,12 @@
 
     </main>
 
-    <!-- פוטר (Footer) -->
     <footer id="contact" class="bg-gray-900 text-white py-20 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold tracking-tight mb-4">בואו נדבר</h2>
-            <p class="text-gray-300 mb-10 max-w-xl mx-auto text-lg">בין אם אתם צריכים יד מכוונת פיננסית, מנטור למנהלים, או אימון אישי לצמיחה - אני כאן להקשיב ולסייע.</p>
+            <p class="text-gray-300 mb-10 max-w-xl mx-auto text-lg">מוזמנים ליצור קשר לתיאום שיחת היכרות, לבדיקת התאמה למנטורינג או לייעוץ פיננסי.</p>
 
             <div class="flex flex-wrap justify-center gap-8 mb-12">
-                <!-- Email -->
                 <a href="mailto:ben.belity@gmail.com" class="group flex flex-col items-center gap-3">
                     <div class="social-btn w-16 h-16 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-primary-green">
                         <img src="email-icon.jpg" alt="מייל" class="w-full h-full object-cover">
@@ -508,7 +381,6 @@
                     <span class="text-sm font-medium text-gray-400 group-hover:text-primary-green transition-colors">שלח מייל</span>
                 </a>
                 
-                <!-- WhatsApp -->
                 <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%2C%20אשמח%20להתייעץ%20איתך." target="_blank" class="group flex flex-col items-center gap-3">
                     <div class="social-btn w-16 h-16 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-[#25D366]">
                         <img src="whatsapp.png" alt="ווטסאפ" class="w-full h-full object-cover p-2">
@@ -516,7 +388,6 @@
                     <span class="text-sm font-medium text-gray-400 group-hover:text-[#25D366] transition-colors">ווטסאפ</span>
                 </a>
 
-                <!-- LinkedIn -->
                 <a href="https://linkedin.com/in/benbelity" target="_blank" class="group flex flex-col items-center gap-3">
                     <div class="social-btn w-16 h-16 rounded-full bg-white flex items-center justify-center transition-all overflow-hidden border-2 border-transparent group-hover:border-[#0077b5]">
                         <img src="linkedin-icon.jpg" alt="לינקדאין" class="w-full h-full object-cover">
@@ -528,21 +399,20 @@
             <div class="w-full max-w-2xl mx-auto mb-8 border-t border-gray-800 pt-8 pb-4 text-xs text-gray-500 text-center leading-relaxed">
                 <p class="mb-1 font-medium text-gray-400">הצהרת נגישות</p>
                 <p class="mb-1">האתר הונגש בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), תשע"ג-2013.</p>
-                <p class="mb-3" dir="ltr">This website is accessible in accordance with the Equal Rights for Persons with Disabilities Regulations.</p>
                 <p>לפניות בנושא נגישות / For accessibility inquiries: <a href="mailto:ben.belity@gmail.com" class="text-primary-green hover:text-white transition-colors">ben.belity@gmail.com</a></p>
             </div>
             
-            <div class="w-full border-t border-gray-800 pt-8 flex flex-col items-center justify-center gap-4 text-sm text-gray-400">
-                <a href="privacy.html" class="hover:text-primary-green transition-colors font-medium">מדיניות פרטיות</a>
-                <div class="flex items-center gap-2">
+            <div class="w-full border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <div class="flex items-center gap-2 mb-4 md:mb-0">
                     <span class="h-8 w-8 bg-gray-800 rounded-full overflow-hidden"><img src="logo.png" alt="לוגו" class="w-full h-full object-cover opacity-70"></span>
                     <span>&copy; 2026 Ben Belity. All rights reserved.</span>
                 </div>
+                <a href="privacy.html" class="hover:text-primary-green transition-colors mt-2 md:mt-0">מדיניות פרטיות</a>
             </div>
         </div>
     </footer>
 
-    <!-- כפתור ווטסאפ צף (CRO) עם סמלון תקין וטקסט מוגדר מראש -->
+    <!-- כפתור ווטסאפ צף -->
     <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%2C%20אשמח%20להתייעץ%20איתך." target="_blank" aria-label="שלח לי הודעה בוואטסאפ" class="whatsapp-float-btn fixed bottom-6 left-6 bg-[#25D366] text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 z-50 transition-all flex items-center justify-center group">
         <img src="whatsapp.png" alt="ווטסאפ" class="h-8 w-8 object-contain bg-white rounded-full p-1" aria-hidden="true">
         <span class="absolute right-full mr-4 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap hidden sm:block">בואו נדבר!</span>
@@ -551,7 +421,6 @@
     <!-- חלון קופץ (Modal) -->
     <div id="textModal" class="modal-overlay" onclick="closeModal(event)">
         <div class="modal-content relative text-right flex flex-col" onclick="event.stopPropagation()">
-            <!-- כפתור סגירה - איקס אדמדם ועדין -->
             <button id="modalCloseBtn" onclick="closeModal(event)" class="sticky top-0 float-left align-middle self-start p-2 text-red-500 bg-white hover:bg-red-50 hover:text-red-700 rounded-full focus:outline-none focus:ring-2 focus:ring-red-400 transition-all z-50 shadow-sm border border-gray-100 backdrop-blur-sm" aria-label="סגור חלון">
                 <i data-lucide="x" class="h-5 w-5"></i>
             </button>
@@ -559,7 +428,6 @@
         </div>
     </div>
 
-    <!-- סקריפטים -->
     <script>
         lucide.createIcons();
 
