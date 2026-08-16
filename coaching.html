@@ -13,9 +13,9 @@
         gtag('config', 'G-6JPMQNBQXJ');
     </script>
 
-    <!-- Event snippet for קליק לשאלון גוגל conversion page -->
+    <!-- Event snippet for WhatsApp click conversion (repurposed from the old Google Form click goal) -->
     <script>
-    function gtag_report_conversion(url) {
+    function gtag_report_whatsapp(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
           window.location = url;
@@ -204,10 +204,10 @@
                 </div>
 
                 <div class="flex flex-col items-center justify-center hidden sm:flex">
-                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
-                       onclick="return gtag_report_conversion('https://forms.gle/7ZkwrhwzT346UUJe7');"
+                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." 
+                       onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');"
                        class="bg-primary-green text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-[#234a38] transition-colors flex items-center gap-2 shadow-sm">
-                        תיאום בדיקת התאמה קצרה
+                        לתיאום שיחת היכרות בוואטסאפ
                         <i data-lucide="clipboard-list" class="h-4 w-4 hidden md:inline"></i>
                     </a>
                     <span class="text-[10px] text-gray-500 mt-1">לא מתחייבים לתהליך. קודם בודקים יחד.</span>
@@ -229,7 +229,7 @@
             <a href="#process" class="block text-base font-medium text-gray-700 hover:text-primary-green">התהליך</a>
             <a href="#about" class="block text-base font-medium text-gray-700 hover:text-primary-green">אודות</a>
             <a href="#testimonials" class="block text-base font-medium text-gray-700 hover:text-primary-green">המלצות</a>
-            <a href="https://forms.gle/7ZkwrhwzT346UUJe7" onclick="return gtag_report_conversion('https://forms.gle/7ZkwrhwzT346UUJe7');" class="block text-base font-bold text-primary-green mt-4 border-t pt-4">תיאום בדיקת התאמה קצרה</a>
+            <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');" class="block text-base font-bold text-primary-green mt-4 border-t pt-4">לתיאום שיחת היכרות בוואטסאפ</a>
         </div>
     </nav>
 
@@ -248,16 +248,19 @@
                         ולאנשים בצומת מקצועי
                     </span>
                     <span class="max-w-3xl mx-auto text-base md:text-lg text-gray-600 font-medium tracking-wide mt-2 leading-relaxed">
-                        תהליך קצר ומובנה של כ־12 מפגשים, לאנשים מתפקדים שמרגישים שהאוטומט, השחיקה או חוסר הדיוק מתחילים לגבות מחיר — ורוצים לעצור בזמן, לחשוב בבהירות, לקבל החלטות ולתרגם אותן לצעדים מעשיים.
+                        תהליך קצר וממוקד, שנבנה יחד לפי מה שמתאים לך — לאנשים מתפקדים שמרגישים שהאוטומט, השחיקה או חוסר הדיוק מתחילים לגבות מחיר, ורוצים לעצור בזמן, לחשוב בבהירות, לקבל החלטות ולתרגם אותן לצעדים מעשיים.
+                    </span>
+                    <span class="max-w-2xl mx-auto text-base text-gray-500 font-medium mt-4 block">
+                        זה לא תהליך מעורפל או "רוחני" — זה מקום רציני, פרקטי וממוקד לחשוב בו ולהחליט.
                     </span>
                 </h1>
                 
                 <div class="mt-8 flex flex-col items-center px-4">
-                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
-                       onclick="return gtag_report_conversion('https://forms.gle/7ZkwrhwzT346UUJe7');"
+                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." 
+                       onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');"
                        class="bg-primary-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all w-full sm:w-auto text-lg flex items-center justify-center gap-3">
                         <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm bg-white/20 p-0.5">
-                        תיאום בדיקת התאמה קצרה
+                        לתיאום שיחת היכרות בוואטסאפ
                     </a>
                     <span class="text-sm font-medium text-gray-500 mt-3">לא מתחייבים לתהליך. קודם בודקים יחד אם זה מתאים.</span>
                 </div>
@@ -394,7 +397,7 @@
                         <h2 class="text-3xl font-bold text-primary-green mb-8">נעים להכיר — בן בליטי</h2>
                         <div class="text-gray-700 text-lg leading-relaxed space-y-6">
                             <p>
-                                אני מאמן אישי ומנטור למנהלים, עם קרוב לשני עשורים של ניסיון בניהול, כספים והובלת אנשים ותהליכים מורכבים.
+                                לפני שהייתי מאמן, הייתי איש ניהול בכיר: קרוב לשני עשורים בניהול, כספים והובלת אנשים ותהליכים מורכבים, כולל שש שנים כסמנכ"ל כספים (CFO) של חברה תעשייתית מוסדרת.
                             </p>
                             <p>
                                 לאורך השנים עבדתי בסביבות שבהן יש אחריות, לחץ, החלטות, עומס וצורך להמשיך לתפקד גם כשלא הכול ברור. משם מגיעה ההבנה שלי שאצל אנשים מתפקדים, האתגרים הגדולים הם לא תמיד חוסר יכולת — אלא <strong class="text-primary-green font-medium">שחיקה שקטה, אוטומט, דחיית החלטות ופער בין מה שנראה מבחוץ לבין מה שמרגישים בפנים.</strong>
@@ -417,11 +420,11 @@
         <!-- כפתור שאלון אמצעי -->
         <section class="py-16 bg-white border-t border-gray-100">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                 <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
-                   onclick="return gtag_report_conversion('https://forms.gle/7ZkwrhwzT346UUJe7');"
+                 <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." 
+                   onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');"
                    class="inline-flex items-center justify-center bg-primary-green text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all text-lg gap-3">
                     <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm">
-                    תיאום בדיקת התאמה קצרה
+                    לתיאום שיחת היכרות בוואטסאפ
                 </a>
                 <p class="text-sm font-medium text-gray-500 mt-3">לא מתחייבים לתהליך. קודם בודקים יחד אם זה מתאים.</p>
             </div>
@@ -482,23 +485,12 @@
                     זו שיחת התאמה קצרה שבה נבין איפה אתה נמצא, מה אתה מחפש, והאם תהליך אימון אישי הוא הכלי הנכון עבורך.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
-                       onclick="return gtag_report_conversion('https://forms.gle/7ZkwrhwzT346UUJe7');"
-                       class="inline-flex items-center justify-center bg-primary-green text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-[#234a38] transition-all text-lg gap-3 w-full sm:w-auto">
-                        <img src="logo.png" alt="עץ ירוק" class="h-6 w-6 object-cover rounded-full filter drop-shadow-sm bg-white/20 p-0.5">
-                        תיאום בדיקת התאמה קצרה
+                    <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." 
+                       onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');"
+                       class="inline-flex items-center justify-center bg-[#25D366] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:brightness-95 transition-all text-lg gap-3 w-full sm:w-auto">
+                        <img src="whatsapp.png" alt="ווטסאפ" class="h-6 w-6 object-contain bg-white rounded-full p-0.5">
+                        לתיאום שיחת היכרות בוואטסאפ
                     </a>
-
-                    <div class="flex flex-col items-center gap-2">
-                        <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לבדוק%20התאמה%20לתהליך." 
-                           target="_blank"
-                           onclick="gtag('event', 'whatsapp_click', {'event_category': 'contact', 'event_label': 'final_cta'});"
-                           aria-label="פנייה בוואטסאפ"
-                           class="h-14 w-14 rounded-full bg-[#25D366] border-4 border-white shadow-lg hover:scale-105 hover:shadow-xl transition-all flex items-center justify-center">
-                            <img src="whatsapp.png" alt="ווטסאפ" class="h-8 w-8 object-contain bg-white rounded-full p-1">
-                        </a>
-                        <span class="text-xs text-gray-400">מעדיפים וואטסאפ?</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -539,9 +531,9 @@
     <!-- כפתור צף לתיאום בדיקת התאמה -->
     <div class="fixed bottom-6 left-6 z-50 flex items-end gap-4">
         <div class="relative group">
-            <a href="https://forms.gle/7ZkwrhwzT346UUJe7" 
-               onclick="return gtag_report_conversion('https://forms.gle/7ZkwrhwzT346UUJe7');"
-               aria-label="תיאום בדיקת התאמה קצרה" 
+            <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." 
+               onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');"
+               aria-label="לתיאום שיחת היכרות בוואטסאפ" 
                class="tree-float-btn bg-white border-2 border-primary-green text-primary-green p-2.5 rounded-full shadow-2xl hover:scale-110 transition-all flex items-center justify-center h-16 w-16 relative z-10">
                 <img src="logo.png" alt="עץ ירוק" class="h-full w-full object-cover rounded-full">
             </a>
