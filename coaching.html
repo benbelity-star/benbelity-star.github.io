@@ -16,15 +16,19 @@
     <!-- Event snippet for WhatsApp click conversion (repurposed from the old Google Form click goal) -->
     <script>
     function gtag_report_whatsapp(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
+      var navigated = false;
+      var go = function () {
+        if (navigated) return;
+        navigated = true;
+        window.location = url;
       };
-      gtag('event', 'conversion', {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
           'send_to': 'AW-18209679993/m_ZkCID3sNgcEPnUhutD',
-          'event_callback': callback
-      });
+          'event_callback': go
+        });
+      }
+      setTimeout(go, 1200);
       return false;
     }
     </script>
@@ -201,6 +205,7 @@
                     <a href="#process" class="hover:text-primary-green transition-colors">התהליך</a>
                     <a href="#about" class="hover:text-primary-green transition-colors">אודות</a>
                     <a href="#testimonials" class="hover:text-primary-green transition-colors">המלצות</a>
+                    <a href="#insights" class="hover:text-primary-green transition-colors">טקסטים</a>
                 </div>
 
                 <div class="flex flex-col items-center justify-center hidden sm:flex">
@@ -229,6 +234,7 @@
             <a href="#process" class="block text-base font-medium text-gray-700 hover:text-primary-green">התהליך</a>
             <a href="#about" class="block text-base font-medium text-gray-700 hover:text-primary-green">אודות</a>
             <a href="#testimonials" class="block text-base font-medium text-gray-700 hover:text-primary-green">המלצות</a>
+            <a href="#insights" class="block text-base font-medium text-gray-700 hover:text-primary-green">טקסטים נבחרים</a>
             <a href="https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות." onclick="return gtag_report_whatsapp('https://wa.me/972545588641?text=שלום%20בן%2C%20הגעתי%20מהאתר%20על%20האימון%20האישי%2C%20אשמח%20לתאם%20שיחת%20היכרות.');" class="block text-base font-bold text-primary-green mt-4 border-t pt-4">לתיאום שיחת היכרות בוואטסאפ</a>
         </div>
     </nav>
@@ -278,6 +284,7 @@
                     <a href="#functioning" class="px-4 py-2 rounded-full bg-gray-50 text-gray-700 hover:bg-primary-green hover:text-white transition-colors">לאנשים מתפקדים</a>
                     <a href="#process" class="px-4 py-2 rounded-full bg-gray-50 text-gray-700 hover:bg-primary-green hover:text-white transition-colors">מה עושים בתהליך</a>
                     <a href="#testimonials" class="px-4 py-2 rounded-full bg-gray-50 text-gray-700 hover:bg-primary-green hover:text-white transition-colors">המלצות</a>
+                    <a href="#insights" class="px-4 py-2 rounded-full bg-gray-50 text-gray-700 hover:bg-primary-green hover:text-white transition-colors">טקסטים נבחרים</a>
                 </div>
             </div>
         </section>
@@ -475,6 +482,100 @@
         </section>
 
         <!-- קריאה אחרונה לפעולה -->
+
+        <!-- טקסטים נבחרים -->
+        <section id="insights" class="py-24 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-accent-green font-semibold tracking-wider text-sm uppercase">Insights &amp; Perspectives</span>
+                    <h2 class="text-3xl font-bold text-primary-green sm:text-4xl mt-2">טקסטים נבחרים</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">כמה דברים שכתבתי על הצמתים שבהם אני פוגש אנשים</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- פוסט חדש - גיל, תקופה ומקום -->
+                    <article class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:shadow-lg transition-all h-full">
+                        <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80"></i>
+                        <p class="text-gray-700 text-sm font-medium leading-relaxed flex-grow">
+                            "נולדתם וגדלתם בישראל בין סוף הסבנטיז לתחילת הניינטיז? הקושי שאתם מרגישים אינו רק אישי — הוא נוצר מהמפגש בין גיל, תקופה ומקום."
+                        </p>
+                        <div id="sum-coach-1" class="hidden mt-4 pt-4 border-t border-gray-100">
+                            <div class="text-sm text-gray-600 leading-relaxed space-y-3 text-right">
+                                <p>שלושה צירים נפגשים באותו רגע: שלב חיים שבו כבר בנינו הרבה — ולכן יש הרבה מה להפסיד; תקופה שבה הבינה המלאכותית ושוק העבודה משנים את כללי המשחק בדיוק כשצברנו מומחיות ומעמד; ומקום שבו תמונת העתיד שגדלנו לתוכה נסדקה.</p>
+                                <p>נוצר מלכוד: כל ניסיון לשנות מאיים על מה שכבר הושג — אבל יש מחיר גם להישארות במקום. וזה אתגר זהותי לא פחות משהוא טכנולוגי.</p>
+                                <p>המשימה אינה בהכרח להמציא את עצמנו מחדש, אלא לעדכן את הדרך כך שתתאים למי שהפכנו להיות ולעולם שאליו אנחנו נכנסים.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-5">
+                            <button type="button" class="summary-toggle inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5C46] border border-gray-200 rounded-full px-3 py-1.5 hover:bg-[#2E5C46] hover:text-white transition-colors"
+                                    aria-expanded="false" aria-controls="sum-coach-1"
+                                    data-label-closed="תמצית" data-label-opened="סגירת התמצית">
+                                <span class="toggle-label">תמצית</span>
+                                <i data-lucide="chevron-down" class="h-3 w-3 toggle-chevron transition-transform"></i>
+                            </button>
+                            <a href="https://lnkd.in/p/dVas__NP" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0077b5] hover:underline">
+                                לפוסט המלא בלינקדאין <i data-lucide="arrow-left" class="h-3 w-3"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- פוסט קיים - חוסר שקט -->
+                    <article class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:shadow-lg transition-all h-full">
+                        <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80"></i>
+                        <p class="text-gray-700 text-sm font-medium leading-relaxed flex-grow">
+                            "יש בכם חוסר שקט. זה מתבטא בחוסר שביעות רצון מהתפקיד, או מהממונים, או מהתמורה. אבל למה זה קורה? ומה אפשר לעשות?"
+                        </p>
+                        <div id="sum-coach-2" class="hidden mt-4 pt-4 border-t border-gray-100">
+                            <div class="text-sm text-gray-600 leading-relaxed space-y-3 text-right">
+                                <p>יש בכם חוסר שקט. הוא מתבטא בחוסר שביעות רצון מהתפקיד, מהממונים או מהתמורה — ואצל אחרים דווקא בעבודה קשה מדי, בשעון מעורר ל-4:30 לפני אימון מפרך, או במאבק לצאת מהמיטה בכל בוקר.</p>
+                                <p>עשיתם הכול נכון — לימודים, קריירה, משפחה — וחשבתם שזה יביא שלווה. אבל משהו עדיין מכרסם. כריסטיאן קלי, לשעבר יועץ בכיר במקינזי, מתאר את זה כפער בין הקול האותנטי הפנימי לחיים המתממשים בפועל.</p>
+                                <p>הגישור על הפער הזה תובע משאבים עצומים — מודעים ולא מודעים — ועלול להתבטא בשחיקה, במתחים במערכות יחסים ואפילו בכאב גופני. אני מכיר אותו מקרוב: עשרים שנה של קריירה וביצוע מושלם של "התוכנית", וחוסר שקט שרק הלך והתגבר.</p>
+                                <p>הפתרון לא היה עוד קורס או הישג נוסף, אלא עצירה אמיתית: מיפוי הפערים, זיהוי הקול האותנטי מול החיים בפועל, ובניית עקרונות והרגלים שמייצרים תנועה אמיתית קדימה.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-5">
+                            <button type="button" class="summary-toggle inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5C46] border border-gray-200 rounded-full px-3 py-1.5 hover:bg-[#2E5C46] hover:text-white transition-colors"
+                                    aria-expanded="false" aria-controls="sum-coach-2"
+                                    data-label-closed="תמצית" data-label-opened="סגירת התמצית">
+                                <span class="toggle-label">תמצית</span>
+                                <i data-lucide="chevron-down" class="h-3 w-3 toggle-chevron transition-transform"></i>
+                            </button>
+                            <a href="https://www.linkedin.com/posts/benbelity_highachievers-personalgrowth-innerwork-share-7454787258332639232-sZq4" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0077b5] hover:underline">
+                                לפוסט המלא בלינקדאין <i data-lucide="arrow-left" class="h-3 w-3"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- פוסט קיים - נתוני הפתיחה -->
+                    <article class="flex flex-col p-6 bg-white shadow-sm rounded-2xl border border-gray-200 hover:shadow-lg transition-all h-full">
+                        <i data-lucide="linkedin" class="h-6 w-6 text-[#0077b5] mb-4 opacity-80"></i>
+                        <p class="text-gray-700 text-sm font-medium leading-relaxed flex-grow">
+                            "איך מתקדמים בקריירה ובחיים, על אף "נתוני הפתיחה" שלנו, הניסיון הלא-מושלם או התואר הלא-מדויק?"
+                        </p>
+                        <div id="sum-coach-3" class="hidden mt-4 pt-4 border-t border-gray-100">
+                            <div class="text-sm text-gray-600 leading-relaxed space-y-3 text-right">
+                                <p>התשובה שמצאתי לא קשורה לעוד קורס או נטוורקינג, אלא לוויתור על פרדיגמה אחת מרכזית: ההפרדה בין העולם הפנימי לעולם החיצוני.</p>
+                                <p>אנחנו מורגלים לחשוב שיש עולם פנימי — התשוקות והרצונות האמיתיים שלנו, ועולם חיצוני פונקציונלי של "העבודה". כל עוד מחזיקים בהפרדה הזו נוצר פיצול, והפיצול מייצר סתירה, כאב, ובזבוז עצום של אנרגיה רק כדי לתחזק אותו.</p>
+                                <p>מי שפועל מתוך סתירה פנימית מנסה להתקדם עם משקולות על הרגליים: תפקוד מתחת לפוטנציאל, ביטחון עצמי נמוך, שחיקה, מרמור ומיצוי מהיר.</p>
+                                <p>הדרך קדימה: להכיר את עצמכם מחדש, לאתר איפה היומיום מתנגש עם העולם הפנימי, ולתת בהדרגה לפער להצטמצם. ברגע שמשחררים את הסתירה — אנרגיה חדשה משתחררת, ועמה גם הזדמנויות שלא היו שם קודם.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-5">
+                            <button type="button" class="summary-toggle inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5C46] border border-gray-200 rounded-full px-3 py-1.5 hover:bg-[#2E5C46] hover:text-white transition-colors"
+                                    aria-expanded="false" aria-controls="sum-coach-3"
+                                    data-label-closed="תמצית" data-label-opened="סגירת התמצית">
+                                <span class="toggle-label">תמצית</span>
+                                <i data-lucide="chevron-down" class="h-3 w-3 toggle-chevron transition-transform"></i>
+                            </button>
+                            <a href="https://www.linkedin.com/posts/benbelity_personalgrowth-cfo-fpanda-share-7438979425754472448-22L5" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0077b5] hover:underline">
+                                לפוסט המלא בלינקדאין <i data-lucide="arrow-left" class="h-3 w-3"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="py-24 bg-gray-900 text-white text-center border-t-4 border-primary-green">
             <div class="max-w-3xl mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold mb-6">רוצה לבדוק אם זה מתאים לך?</h2>
@@ -658,6 +759,23 @@
                 }
             });
         })();
+    </script>
+
+    <!-- פתיחה/סגירה של תמצית פוסט -->
+    <script>
+        document.addEventListener('click', function (e) {
+            var btn = e.target.closest('.summary-toggle');
+            if (!btn) return;
+            var panel = document.getElementById(btn.getAttribute('aria-controls'));
+            if (!panel) return;
+            var isOpen = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!isOpen));
+            panel.classList.toggle('hidden', isOpen);
+            var label = btn.querySelector('.toggle-label');
+            if (label) label.textContent = isOpen ? btn.dataset.labelClosed : btn.dataset.labelOpened;
+            var chev = btn.querySelector('.toggle-chevron');
+            if (chev) chev.style.transform = isOpen ? '' : 'rotate(180deg)';
+        });
     </script>
 </body>
 </html>

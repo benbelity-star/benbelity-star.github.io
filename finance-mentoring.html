@@ -17,15 +17,19 @@
     <!-- Event snippet for whatsapp of mentoring conversion page -->
     <script>
     function gtag_report_whatsapp(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
+      var navigated = false;
+      var go = function () {
+        if (navigated) return;
+        navigated = true;
+        window.location = url;
       };
-      gtag('event', 'conversion', {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
           'send_to': 'AW-18209679993/T0OFCJ3rmtgcEPnUhutD',
-          'event_callback': callback
-      });
+          'event_callback': go
+        });
+      }
+      setTimeout(go, 1200);
       return false;
     }
     </script>
