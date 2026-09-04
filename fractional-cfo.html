@@ -15,11 +15,15 @@
     </script>
 
     <!-- Event snippet for whatsapp of fractional CFO conversion page -->
-    <!-- ⚠️ TODO: Create a new Conversion Action in Google Ads named e.g. "CFO Page - WhatsApp Click"
-         (Website goal), then replace REPLACE_WITH_CFO_LABEL below with the label it gives you.
+    <!-- ⚠️ TODO: Create a Conversion Action in Google Ads named e.g. "CFO Page - WhatsApp Click"
+         (Website goal), then paste its AW-18209679993/label string into ADS_CONVERSION_ID below.
          Do NOT reuse the coaching/mentoring labels — Google needs a separate action per page
-         if you want to bid to this goal specifically for CFO search campaigns. -->
+         if you want to bid to this goal specifically for CFO search campaigns.
+         Guarded: no label yet, so no conversion event is sent until this is filled in — the
+         WhatsApp navigation itself still always happens. -->
     <script>
+    var ADS_CONVERSION_ID = null; // TODO: replace with real Google Ads label, e.g. 'AW-18209679993/xxxxxxxxxxxx'
+
     function gtag_report_whatsapp(url) {
       var navigated = false;
       var go = function () {
@@ -27,13 +31,17 @@
         navigated = true;
         window.location = url;
       };
-      if (typeof gtag === 'function') {
+
+      if (typeof gtag === 'function' && ADS_CONVERSION_ID) {
         gtag('event', 'conversion', {
-          'send_to': 'AW-18209679993/REPLACE_WITH_CFO_LABEL',
+          'send_to': ADS_CONVERSION_ID,
           'event_callback': go
         });
+        setTimeout(go, 1200);
+        return false;
       }
-      setTimeout(go, 1200);
+
+      setTimeout(go, 300);
       return false;
     }
     </script>
@@ -56,7 +64,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.300.0/dist/umd/lucide.min.js"></script>
 
     <style>
         body { font-family: 'Rubik', sans-serif; scroll-behavior: smooth; }
@@ -518,7 +526,7 @@
             </a>
 
             <div class="flex justify-center gap-5">
-                <a href="https://www.linkedin.com/in/benbelity" target="_blank" class="text-gray-400 hover:text-[#0077b5] transition-colors" aria-label="לינקדאין">
+                <a href="https://www.linkedin.com/in/benbelity" target="_blank" rel="noopener" class="text-gray-400 hover:text-[#0077b5] transition-colors" aria-label="לינקדאין">
                     <i data-lucide="linkedin" class="h-5 w-5"></i>
                 </a>
             </div>
